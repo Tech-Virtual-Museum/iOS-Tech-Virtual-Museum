@@ -1,1 +1,1 @@
-# Tech Virtual Museum  :classical_building: :computer: :minidisc:
+# Tech Virtual Museum  :classical_building: :computer: :cd:
