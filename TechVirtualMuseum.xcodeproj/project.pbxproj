@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		553BCA5B291337F4008A2847 /* TechVirtualMuseumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BCA5A291337F4008A2847 /* TechVirtualMuseumApp.swift */; };
-		553BCA5D291337F4008A2847 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BCA5C291337F4008A2847 /* ContentView.swift */; };
+		552FF0242932E56800BD8FC8 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF0232932E56800BD8FC8 /* FirebaseAuth.swift */; };
+		552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF0292932F89A00BD8FC8 /* LoginViewController.swift */; };
+		552FF030293302E300BD8FC8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF02F293302E300BD8FC8 /* LoginView.swift */; };
+		552FF0322933061900BD8FC8 /* TechVirtualMuseumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF0312933061900BD8FC8 /* TechVirtualMuseumApp.swift */; };
 		553BCA5F291337FA008A2847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553BCA5E291337FA008A2847 /* Assets.xcassets */; };
 		553BCA62291337FA008A2847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553BCA61291337FA008A2847 /* Preview Assets.xcassets */; };
 		553BCA6C291337FB008A2847 /* TechVirtualMuseumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BCA6B291337FB008A2847 /* TechVirtualMuseumTests.swift */; };
@@ -56,9 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		552FF0232932E56800BD8FC8 /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
+		552FF0292932F89A00BD8FC8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		552FF02F293302E300BD8FC8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		552FF0312933061900BD8FC8 /* TechVirtualMuseumApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TechVirtualMuseumApp.swift; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/TechVirtualMuseumApp.swift"; sourceTree = "<group>"; };
 		553BCA57291337F4008A2847 /* TechVirtualMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechVirtualMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		553BCA5A291337F4008A2847 /* TechVirtualMuseumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechVirtualMuseumApp.swift; sourceTree = "<group>"; };
-		553BCA5C291337F4008A2847 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		553BCA5E291337FA008A2847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		553BCA61291337FA008A2847 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		553BCA67291337FB008A2847 /* TechVirtualMuseumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechVirtualMuseumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +118,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		552FF01B2932D55D00BD8FC8 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				552FF02F293302E300BD8FC8 /* LoginView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		552FF01E2932E51D00BD8FC8 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				552FF0232932E56800BD8FC8 /* FirebaseAuth.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		552FF0282932F86A00BD8FC8 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				552FF0292932F89A00BD8FC8 /* LoginViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
 		553BCA4E291337F4008A2847 = {
 			isa = PBXGroup;
 			children = (
@@ -138,10 +166,12 @@
 		553BCA59291337F4008A2847 /* TechVirtualMuseum */ = {
 			isa = PBXGroup;
 			children = (
+				552FF0282932F86A00BD8FC8 /* controller */,
+				552FF01E2932E51D00BD8FC8 /* services */,
+				552FF01B2932D55D00BD8FC8 /* view */,
 				55EA44822919C4070095D8E5 /* Main.storyboard */,
 				55BE61252915BD8B007A7B34 /* GoogleService-Info.plist */,
-				553BCA5A291337F4008A2847 /* TechVirtualMuseumApp.swift */,
-				553BCA5C291337F4008A2847 /* ContentView.swift */,
+				552FF0312933061900BD8FC8 /* TechVirtualMuseumApp.swift */,
 				553BCA5E291337FA008A2847 /* Assets.xcassets */,
 				553BCA60291337FA008A2847 /* Preview Content */,
 				55C669622913C0CE0054734C /* Launch Screen.storyboard */,
@@ -359,8 +389,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				553BCA5D291337F4008A2847 /* ContentView.swift in Sources */,
-				553BCA5B291337F4008A2847 /* TechVirtualMuseumApp.swift in Sources */,
+				552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */,
+				552FF0322933061900BD8FC8 /* TechVirtualMuseumApp.swift in Sources */,
+				552FF0242932E56800BD8FC8 /* FirebaseAuth.swift in Sources */,
+				552FF030293302E300BD8FC8 /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,9 +555,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TechVirtualMuseum/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -553,9 +587,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TechVirtualMuseum/Info.plist;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
