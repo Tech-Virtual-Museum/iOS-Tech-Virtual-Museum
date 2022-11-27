@@ -11,6 +11,7 @@
 		552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF0292932F89A00BD8FC8 /* LoginViewController.swift */; };
 		552FF030293302E300BD8FC8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF02F293302E300BD8FC8 /* LoginView.swift */; };
 		552FF03429330C3900BD8FC8 /* TechVirtualMuseumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF03329330C3900BD8FC8 /* TechVirtualMuseumApp.swift */; };
+		552FF0362933118300BD8FC8 /* Lato in Resources */ = {isa = PBXBuildFile; fileRef = 552FF0352933118300BD8FC8 /* Lato */; };
 		553BCA5F291337FA008A2847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553BCA5E291337FA008A2847 /* Assets.xcassets */; };
 		553BCA62291337FA008A2847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553BCA61291337FA008A2847 /* Preview Assets.xcassets */; };
 		553BCA6C291337FB008A2847 /* TechVirtualMuseumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BCA6B291337FB008A2847 /* TechVirtualMuseumTests.swift */; };
@@ -62,6 +63,7 @@
 		552FF0292932F89A00BD8FC8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		552FF02F293302E300BD8FC8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		552FF03329330C3900BD8FC8 /* TechVirtualMuseumApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TechVirtualMuseumApp.swift; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/TechVirtualMuseumApp.swift"; sourceTree = "<group>"; };
+		552FF0352933118300BD8FC8 /* Lato */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Lato; sourceTree = "<group>"; };
 		553BCA57291337F4008A2847 /* TechVirtualMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechVirtualMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553BCA5E291337FA008A2847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		553BCA61291337FA008A2847 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 		55A7E254291A78A7002F833D /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				552FF0352933118300BD8FC8 /* Lato */,
 				55A7E255291A78B2002F833D /* Roboto */,
 			);
 			path = fonts;
@@ -348,6 +351,7 @@
 			files = (
 				55A7E26D291A7907002F833D /* Roboto-Thin.ttf in Resources */,
 				55A7E267291A78EF002F833D /* Roboto-ThinItalic.ttf in Resources */,
+				552FF0362933118300BD8FC8 /* Lato in Resources */,
 				55A7E268291A78F1002F833D /* Roboto-BoldItalic.ttf in Resources */,
 				55A7E26C291A7905002F833D /* Roboto-Bold.ttf in Resources */,
 				55A7E269291A78F4002F833D /* Roboto-LightItalic.ttf in Resources */,

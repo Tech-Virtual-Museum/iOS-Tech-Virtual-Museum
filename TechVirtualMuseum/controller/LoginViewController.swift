@@ -32,9 +32,10 @@ class LoginViewController: UIViewController {
                 } else {
                     message = "There was an error."
                 }
+                print(message)
                 let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                //self.display(alertController: alertController)
+                self.present(alertController, animated: false)
             }
     }
     
