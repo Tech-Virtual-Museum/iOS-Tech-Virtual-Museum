@@ -118,7 +118,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="JUH-Pt-nMk" kind="show" id="GXl-0N-00q"/>
+                                    <segue destination="JUH-Pt-nMk" kind="presentation" modalPresentationStyle="fullScreen" id="eOv-Gc-mSm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -135,11 +135,26 @@
             <point key="canvasLocation" x="935" y="55"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="1c0-91-tNb">
+            <objects>
+                <viewController id="6C6-1t-I6g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gc2-yo-ZZZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lDQ-5T-O0c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQL-vA-Yql" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1833" y="-696"/>
+        </scene>
+        <!--Title-->
         <scene sceneID="bHL-qi-SJE">
             <objects>
-                <viewController id="JUH-Pt-nMk" sceneMemberID="viewController">
+                <viewController id="JUH-Pt-nMk" customClass="SignUpViewController" customModule="TechVirtualMuseum" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mh2-mP-EHY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="LogoWithoutText" translatesAutoresizingMaskIntoConstraints="NO" id="s8c-Eh-MyY">
@@ -169,6 +184,7 @@
                                     <color key="baseBackgroundColor" name="ButtonBackground"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="clickSignUpButton:" destination="JUH-Pt-nMk" eventType="touchUpInside" id="7ow-d6-sDK"/>
                                     <action selector="processLogin:" destination="PVb-Z8-Xh7" eventType="touchUpInside" id="mu9-zt-TUF"/>
                                 </connections>
                             </button>
@@ -228,9 +244,12 @@
                                 <rect key="frame" x="33" y="498" width="312" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="TextAreaBackground"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <color key="textColor" name="PlaceholderColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLk-7H-Vjj">
                                 <rect key="frame" x="33" y="475" width="64" height="15"/>
@@ -258,7 +277,14 @@
                         <viewLayoutGuide key="safeArea" id="nn1-Ui-MoM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hjo-NT-P37"/>
+                    <navigationItem key="navigationItem" title="Title" id="M8Z-gx-0Ja"/>
+                    <connections>
+                        <outlet property="txtEmail" destination="61n-Ho-NY3" id="E13-3w-Cue"/>
+                        <outlet property="txtName" destination="kOb-RL-pLv" id="VMp-lq-Feg"/>
+                        <outlet property="txtPassword" destination="shB-YD-cj1" id="B5j-Ij-3zH"/>
+                        <outlet property="txtRepeatPassword" destination="0Ld-mA-kfD" id="frs-Zd-g4R"/>
+                        <outlet property="txtSurname" destination="mB2-IG-p41" id="MPU-E2-5m3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvG-Xz-YVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

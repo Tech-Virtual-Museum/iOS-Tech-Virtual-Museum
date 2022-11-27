@@ -12,6 +12,7 @@
 		552FF030293302E300BD8FC8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF02F293302E300BD8FC8 /* LoginView.swift */; };
 		552FF03429330C3900BD8FC8 /* TechVirtualMuseumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF03329330C3900BD8FC8 /* TechVirtualMuseumApp.swift */; };
 		552FF0362933118300BD8FC8 /* Lato in Resources */ = {isa = PBXBuildFile; fileRef = 552FF0352933118300BD8FC8 /* Lato */; };
+		5535D01F293321CE00E64C2B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5535D01E293321CE00E64C2B /* SignUpViewController.swift */; };
 		553BCA5F291337FA008A2847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553BCA5E291337FA008A2847 /* Assets.xcassets */; };
 		553BCA62291337FA008A2847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553BCA61291337FA008A2847 /* Preview Assets.xcassets */; };
 		553BCA6C291337FB008A2847 /* TechVirtualMuseumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BCA6B291337FB008A2847 /* TechVirtualMuseumTests.swift */; };
@@ -64,6 +65,8 @@
 		552FF02F293302E300BD8FC8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		552FF03329330C3900BD8FC8 /* TechVirtualMuseumApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TechVirtualMuseumApp.swift; path = "../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/TechVirtualMuseumApp.swift"; sourceTree = "<group>"; };
 		552FF0352933118300BD8FC8 /* Lato */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Lato; sourceTree = "<group>"; };
+		5535D01E293321CE00E64C2B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5535D020293324BA00E64C2B /* TechVirtualMuseum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TechVirtualMuseum.entitlements; sourceTree = "<group>"; };
 		553BCA57291337F4008A2847 /* TechVirtualMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechVirtualMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553BCA5E291337FA008A2847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		553BCA61291337FA008A2847 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -140,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				552FF0292932F89A00BD8FC8 /* LoginViewController.swift */,
+				5535D01E293321CE00E64C2B /* SignUpViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -168,6 +172,7 @@
 		553BCA59291337F4008A2847 /* TechVirtualMuseum */ = {
 			isa = PBXGroup;
 			children = (
+				5535D020293324BA00E64C2B /* TechVirtualMuseum.entitlements */,
 				552FF0282932F86A00BD8FC8 /* controller */,
 				552FF01E2932E51D00BD8FC8 /* services */,
 				552FF01B2932D55D00BD8FC8 /* view */,
@@ -397,6 +402,7 @@
 				552FF03429330C3900BD8FC8 /* TechVirtualMuseumApp.swift in Sources */,
 				552FF0242932E56800BD8FC8 /* FirebaseAuth.swift in Sources */,
 				552FF030293302E300BD8FC8 /* LoginView.swift in Sources */,
+				5535D01F293321CE00E64C2B /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +558,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TechVirtualMuseum/TechVirtualMuseum.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TechVirtualMuseum/Preview Content\"";
@@ -584,6 +591,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TechVirtualMuseum/TechVirtualMuseum.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TechVirtualMuseum/Preview Content\"";
