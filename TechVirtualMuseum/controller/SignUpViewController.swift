@@ -38,6 +38,7 @@ class SignUpViewController: UIViewController {
                     var message: String = ""
                     if (success) {
                         message = "User was sucessfully created."
+                        self.performSegue(withIdentifier: "home", sender: self)
                     } else {
                         message = "There was an error. " + error
                     }

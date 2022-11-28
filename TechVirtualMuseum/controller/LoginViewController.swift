@@ -24,13 +24,14 @@ class LoginViewController: UIViewController {
     @IBAction func processLogin(_ sender: Any) {
         let loginManager = FirebaseAuth()
             guard let email = txtEmail.text, let password = txtPassword.text else { return }
-        loginManager.signIn(email: email, password: password) {[weak self] (success) in
+        loginManager.signIn(email: email, password: password) {[weak self] (success, error) in
                 guard let `self` = self else { return }
                 var message: String = ""
                 if (success) {
                     message = "User was sucessfully logged in."
+                    self.performSegue(withIdentifier: "home", sender: self)
                 } else {
-                    message = "There was an error."
+                    message = "There was an error. " + error
                 }
                 print(message)
                 let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)

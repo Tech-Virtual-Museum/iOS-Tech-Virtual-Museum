@@ -22,8 +22,13 @@ class FirebaseAuth {
         }
     }
     
-    func signIn(email: String, password: String, completionBlock: @escaping (_ success: Bool) -> Void){
-        Auth.auth().signIn(withEmail: email, password: password)
+    func signIn(email: String, password: String, completionBlock: @escaping (_ success: Bool,  _ error: String) -> Void){
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                completionBlock(false, error.localizedDescription ?? "")
+            } else {
+                completionBlock(true, "")
+            }
+        }
     }
-
 }
