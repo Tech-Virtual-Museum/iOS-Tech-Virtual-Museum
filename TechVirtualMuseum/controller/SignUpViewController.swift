@@ -31,7 +31,7 @@ class SignUpViewController: UIViewController {
     
 
     @IBAction func clickSignUpButton(_ sender: Any) {
-        let signUpManager = FirebaseAuth()
+        let signUpManager = FirebaseAuthService()
         if let email = txtEmail.text, let password = txtPassword.text, let name = txtName.text, let surname = txtSurname.text {
                 signUpManager.createUser(name: name, surname: surname, email: email, password: password) {[weak self] (success, error) in
                     guard let `self` = self else { return }

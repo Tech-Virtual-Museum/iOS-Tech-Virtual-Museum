@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func processLogin(_ sender: Any) {
-        let loginManager = FirebaseAuth()
+        let loginManager = FirebaseAuthService()
             guard let email = txtEmail.text, let password = txtPassword.text else { return }
         loginManager.signIn(email: email, password: password) {[weak self] (success, error) in
                 guard let `self` = self else { return }

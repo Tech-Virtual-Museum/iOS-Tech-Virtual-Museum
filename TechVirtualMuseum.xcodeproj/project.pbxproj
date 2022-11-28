@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		552FF0242932E56800BD8FC8 /* FirebaseAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF0232932E56800BD8FC8 /* FirebaseAuth.swift */; };
+		552FF0242932E56800BD8FC8 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF0232932E56800BD8FC8 /* FirebaseAuthService.swift */; };
 		552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF0292932F89A00BD8FC8 /* LoginViewController.swift */; };
 		552FF030293302E300BD8FC8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF02F293302E300BD8FC8 /* LoginView.swift */; };
 		552FF0362933118300BD8FC8 /* Lato in Resources */ = {isa = PBXBuildFile; fileRef = 552FF0352933118300BD8FC8 /* Lato */; };
@@ -30,6 +30,7 @@
 		55A7E26D291A7907002F833D /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E261291A78B2002F833D /* Roboto-Thin.ttf */; };
 		55A7E26E291A790A002F833D /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E262291A78B2002F833D /* Roboto-Black.ttf */; };
 		55B0CDED293432D700C7D96B /* TechVirtualMuseumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0CDEC293432D700C7D96B /* TechVirtualMuseumApp.swift */; };
+		55B0CDEF293445F900C7D96B /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0CDEE293445F900C7D96B /* FirestoreService.swift */; };
 		55BE61262915BD8B007A7B34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BE61252915BD8B007A7B34 /* GoogleService-Info.plist */; };
 		55BE61272915BD8B007A7B34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BE61252915BD8B007A7B34 /* GoogleService-Info.plist */; };
 		55BE61282915BD8B007A7B34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BE61252915BD8B007A7B34 /* GoogleService-Info.plist */; };
@@ -60,7 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		552FF0232932E56800BD8FC8 /* FirebaseAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuth.swift; sourceTree = "<group>"; };
+		552FF0232932E56800BD8FC8 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		552FF0292932F89A00BD8FC8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		552FF02F293302E300BD8FC8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		552FF0352933118300BD8FC8 /* Lato */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Lato; sourceTree = "<group>"; };
@@ -88,6 +89,7 @@
 		55A7E261291A78B2002F833D /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		55A7E262291A78B2002F833D /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		55B0CDEC293432D700C7D96B /* TechVirtualMuseumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechVirtualMuseumApp.swift; sourceTree = "<group>"; };
+		55B0CDEE293445F900C7D96B /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		55BE61252915BD8B007A7B34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		55C669622913C0CE0054734C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		55EA44822919C4070095D8E5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -134,7 +136,8 @@
 		552FF01E2932E51D00BD8FC8 /* services */ = {
 			isa = PBXGroup;
 			children = (
-				552FF0232932E56800BD8FC8 /* FirebaseAuth.swift */,
+				552FF0232932E56800BD8FC8 /* FirebaseAuthService.swift */,
+				55B0CDEE293445F900C7D96B /* FirestoreService.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -400,9 +403,10 @@
 			files = (
 				552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */,
 				55B0CDED293432D700C7D96B /* TechVirtualMuseumApp.swift in Sources */,
-				552FF0242932E56800BD8FC8 /* FirebaseAuth.swift in Sources */,
+				552FF0242932E56800BD8FC8 /* FirebaseAuthService.swift in Sources */,
 				552FF030293302E300BD8FC8 /* LoginView.swift in Sources */,
 				5535D01F293321CE00E64C2B /* SignUpViewController.swift in Sources */,
+				55B0CDEF293445F900C7D96B /* FirestoreService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
