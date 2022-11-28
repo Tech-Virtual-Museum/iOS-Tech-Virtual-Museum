@@ -11,10 +11,17 @@ import FirebaseAuth
 import UIKit
 
 class FirebaseAuth {
+    var db: Firestore!
 
     func createUser(name: String, surname: String, email: String, password: String, completionBlock: @escaping (_ success: Bool, _ error: String) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) {(authResult, error) in
             if let user = authResult?.user {
+                let userData = ["name": name,
+                                "surname": surname,
+                                "email": email
+                                ]
+
+                Firestore.firestore().collection("users").document(user.uid).setData(userData)
                 completionBlock(true, "")
             } else {
                 completionBlock(false, error?.localizedDescription ?? "")
