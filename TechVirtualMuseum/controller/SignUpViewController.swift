@@ -8,19 +8,13 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
+    var signUpManager = FirebaseAuthService()
     
     
     @IBOutlet weak var txtName: UITextField!
-    
     @IBOutlet weak var txtSurname: UITextField!
-    
-    
     @IBOutlet weak var txtEmail: UITextField!
-    
-    
     @IBOutlet weak var txtPassword: UITextField!
-    
-    
     @IBOutlet weak var txtRepeatPassword: UITextField!
     
     override func viewDidLoad() {
@@ -31,7 +25,6 @@ class SignUpViewController: UIViewController {
     
 
     @IBAction func clickSignUpButton(_ sender: Any) {
-        let signUpManager = FirebaseAuthService()
         if let email = txtEmail.text, let password = txtPassword.text, let name = txtName.text, let surname = txtSurname.text {
                 signUpManager.createUser(name: name, surname: surname, email: email, password: password) {[weak self] (success, error) in
                     guard let `self` = self else { return }

@@ -39,4 +39,21 @@ class FirebaseAuthService {
             }
         }
     }
+    
+    func getCurrentUserId(completion: @escaping (_ loggedIn: Bool, _ id: String) -> Void) {
+        if Auth.auth().currentUser != nil {
+            completion(true, Auth.auth().currentUser!.uid)
+        } else {
+            completion(false, "")
+        }
+    }
+    
+    func signOut(completion: @escaping (_ error: Bool) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion(true)
+        } catch {
+            completion(false)
+        }
+    }
 }

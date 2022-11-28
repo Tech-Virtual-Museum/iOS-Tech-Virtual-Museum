@@ -17,6 +17,8 @@
 		553BCA6C291337FB008A2847 /* TechVirtualMuseumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BCA6B291337FB008A2847 /* TechVirtualMuseumTests.swift */; };
 		553BCA76291337FB008A2847 /* TechVirtualMuseumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BCA75291337FB008A2847 /* TechVirtualMuseumUITests.swift */; };
 		553BCA78291337FB008A2847 /* TechVirtualMuseumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BCA77291337FB008A2847 /* TechVirtualMuseumUITestsLaunchTests.swift */; };
+		55456DAF2934A91100AF1AFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DAE2934A91100AF1AFF /* HomeViewController.swift */; };
+		55456DB12934B48F00AF1AFF /* AccountDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */; };
 		55A7E263291A78E5002F833D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E256291A78B2002F833D /* Roboto-Medium.ttf */; };
 		55A7E264291A78E8002F833D /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E257291A78B2002F833D /* Roboto-Light.ttf */; };
 		55A7E265291A78EA002F833D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E258291A78B2002F833D /* Roboto-Regular.ttf */; };
@@ -75,6 +77,8 @@
 		553BCA71291337FB008A2847 /* TechVirtualMuseumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechVirtualMuseumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		553BCA75291337FB008A2847 /* TechVirtualMuseumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechVirtualMuseumUITests.swift; sourceTree = "<group>"; };
 		553BCA77291337FB008A2847 /* TechVirtualMuseumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechVirtualMuseumUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		55456DAE2934A91100AF1AFF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataViewController.swift; sourceTree = "<group>"; };
 		5567EE84293194690061C988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55A7E256291A78B2002F833D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		55A7E257291A78B2002F833D /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 			children = (
 				552FF0292932F89A00BD8FC8 /* LoginViewController.swift */,
 				5535D01E293321CE00E64C2B /* SignUpViewController.swift */,
+				55456DAE2934A91100AF1AFF /* HomeViewController.swift */,
+				55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -401,11 +407,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55456DB12934B48F00AF1AFF /* AccountDataViewController.swift in Sources */,
 				552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */,
 				55B0CDED293432D700C7D96B /* TechVirtualMuseumApp.swift in Sources */,
 				552FF0242932E56800BD8FC8 /* FirebaseAuthService.swift in Sources */,
 				552FF030293302E300BD8FC8 /* LoginView.swift in Sources */,
 				5535D01F293321CE00E64C2B /* SignUpViewController.swift in Sources */,
+				55456DAF2934A91100AF1AFF /* HomeViewController.swift in Sources */,
 				55B0CDEF293445F900C7D96B /* FirestoreService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

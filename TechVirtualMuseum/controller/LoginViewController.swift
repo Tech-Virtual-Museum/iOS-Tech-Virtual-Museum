@@ -8,22 +8,24 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    var loginManager = FirebaseAuthService()
     
     
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
     
     
     @IBAction func processLogin(_ sender: Any) {
-        let loginManager = FirebaseAuthService()
-            guard let email = txtEmail.text, let password = txtPassword.text else { return }
+        guard let email = txtEmail.text, let password = txtPassword.text else { return }
         loginManager.signIn(email: email, password: password) {[weak self] (success, error) in
                 guard let `self` = self else { return }
                 var message: String = ""
