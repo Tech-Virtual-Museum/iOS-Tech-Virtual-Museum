@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CarouselElement: UIView {
+class CarouselImage: UIView {
     static let CAROUSEL_ITEM_NIB = "CarouselItem"
     
     

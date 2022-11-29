@@ -8,6 +8,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -255,7 +256,7 @@
                                 <color key="pageIndicatorTintColor" name="PlaceholderColor"/>
                             </pageControl>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZCK-Dd-2wH">
-                                <rect key="frame" x="43" y="199" width="295" height="150"/>
+                                <rect key="frame" x="43" y="199" width="294" height="149"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="igh-qX-1Sy" kind="embed" id="PtS-jp-hx9"/>
@@ -416,10 +417,10 @@
             </objects>
             <point key="canvasLocation" x="1199" y="55"/>
         </scene>
-        <!--View Controller-->
+        <!--Events View Controller-->
         <scene sceneID="9yJ-Fh-vs9">
             <objects>
-                <viewController id="szi-IY-BTF" sceneMemberID="viewController">
+                <viewController id="szi-IY-BTF" customClass="EventsViewController" customModule="TechVirtualMuseum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Dm-Io-dfd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -431,6 +432,28 @@
                                 <color key="textColor" name="TitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AQ1-yk-zFf">
+                                <rect key="frame" x="0.0" y="109" width="375" height="620"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rSC-qi-JVf">
+                                    <size key="itemSize" width="375" height="89"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zVB-ho-5sN">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="N3m-bf-2Hd">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="375" height="89"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vTS-z8-QDD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -439,7 +462,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAq-3y-GSF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2844" y="-1453.4482758620691"/>
+            <point key="canvasLocation" x="2844" y="-1388.423645320197"/>
         </scene>
         <!--Account Data View Controller-->
         <scene sceneID="iPW-i2-kzL">
@@ -582,8 +605,9 @@
             <objects>
                 <viewController id="igh-qX-1Sy" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="onD-nG-9Pe">
-                        <rect key="frame" x="0.0" y="0.0" width="295" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="294" height="149"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jk9-bh-ts9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
@@ -593,7 +617,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jLI-oH-QGB"/>
+        <segue reference="o8b-7a-8YP"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="LogoWithoutText" width="319" height="277"/>
