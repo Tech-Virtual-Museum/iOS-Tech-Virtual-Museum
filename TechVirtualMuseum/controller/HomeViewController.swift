@@ -6,15 +6,47 @@
 //
 
 import UIKit
+import MapKit
 
 class HomeViewController: UIViewController {
     
     
+    @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var carousel: UIImageView!
+    
+    var firestoreService = FirestoreService()
+    var items: [UIViewController] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        setMapAnnotation(latitude: 28.0731675, longitude: -15.453959)
+        setMapRegion(latitude: 28.0731675, longitude: -15.453959)
+        self.firestoreService.getDocumentWithDocumentId(collectionId: "slider", documentId: "HXMZGGHpNwx6RJ6w20mV"){
+            (error, docData) in
+            print(docData)
+        }
+    }
+    
+    func setMapAnnotation(latitude: Double, longitude: Double) {
+        let mkAnnotation: MKPointAnnotation = MKPointAnnotation()
+        mkAnnotation.coordinate =  CLLocationCoordinate2DMake(latitude, longitude)
+        map.addAnnotation(mkAnnotation)
+    }
+    
+    func setMapRegion(latitude: Double, longitude: Double) {
+        let center = CLLocationCoordinate2D(latitude: latitude,longitude: longitude)
+        let mRegion = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+        map.setRegion(mRegion, animated: true)
+    }
+    
+    func getSliderImages(completion: @escaping (_ error: Bool, _ docData: [String: Any]) -> Void) {
+        self.firestoreService.getDocumentWithDocumentId(collectionId: "slider", documentId: "HXMZGGHpNwx6RJ6w20mV"){
+            (error, docData) in
+            completion(error, docData)
+        }
     }
     
 
