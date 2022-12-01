@@ -22,7 +22,7 @@
 		55456DB12934B48F00AF1AFF /* AccountDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */; };
 		55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DB32935239800AF1AFF /* CarouselImage.swift */; };
 		55946A5829382BA9000178BF /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 55946A5729382BA9000178BF /* CodeScanner */; };
-		55946A5A29382D98000178BF /* CodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55946A5929382D98000178BF /* CodeScannerView.swift */; };
+		55946A5C29382F60000178BF /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55946A5B29382F60000178BF /* QRScannerViewController.swift */; };
 		55A7E263291A78E5002F833D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E256291A78B2002F833D /* Roboto-Medium.ttf */; };
 		55A7E264291A78E8002F833D /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E257291A78B2002F833D /* Roboto-Light.ttf */; };
 		55A7E265291A78EA002F833D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E258291A78B2002F833D /* Roboto-Regular.ttf */; };
@@ -95,7 +95,7 @@
 		55456DB32935239800AF1AFF /* CarouselImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselImage.swift; sourceTree = "<group>"; };
 		5567EE84293194690061C988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5569AA9D7FC0138DEFCA134A /* Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig"; path = "Target Support Files/Pods-TechVirtualMuseum-TechVirtualMuseumUITests/Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		55946A5929382D98000178BF /* CodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScannerView.swift; sourceTree = "<group>"; };
+		55946A5B29382F60000178BF /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
 		55A7E256291A78B2002F833D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		55A7E257291A78B2002F833D /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		55A7E258291A78B2002F833D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -157,7 +157,6 @@
 		552FF01B2932D55D00BD8FC8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				55946A5929382D98000178BF /* CodeScannerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +178,7 @@
 				55456DAE2934A91100AF1AFF /* HomeViewController.swift */,
 				55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */,
 				55DB8A2C29362AD000A1C238 /* EventViewController.swift */,
+				55946A5B29382F60000178BF /* QRScannerViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -583,11 +583,11 @@
 				55DB8A2D29362AD000A1C238 /* EventViewController.swift in Sources */,
 				55DB8A2A2936286C00A1C238 /* Event.swift in Sources */,
 				552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */,
-				55946A5A29382D98000178BF /* CodeScannerView.swift in Sources */,
 				55B0CDED293432D700C7D96B /* TechVirtualMuseumApp.swift in Sources */,
 				5502161229366FE700CFC800 /* EventsFirebase.swift in Sources */,
 				552FF0242932E56800BD8FC8 /* FirebaseAuthService.swift in Sources */,
 				55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */,
+				55946A5C29382F60000178BF /* QRScannerViewController.swift in Sources */,
 				5535D01F293321CE00E64C2B /* SignUpViewController.swift in Sources */,
 				55456DAF2934A91100AF1AFF /* HomeViewController.swift in Sources */,
 				55B0CDEF293445F900C7D96B /* FirestoreService.swift in Sources */,
@@ -677,7 +677,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -731,7 +731,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -755,6 +755,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TechVirtualMuseum/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to scan QR codes!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -762,6 +763,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -789,6 +791,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TechVirtualMuseum/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to scan QR codes!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -796,6 +799,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
