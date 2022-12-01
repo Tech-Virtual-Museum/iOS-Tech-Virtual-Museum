@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35DFB6BBDA57E580584B19C7 /* Pods_TechVirtualMuseumTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E7623CBF82780B831E614C /* Pods_TechVirtualMuseumTests.framework */; };
+		5502161229366FE700CFC800 /* EventsFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502161129366FE700CFC800 /* EventsFirebase.swift */; };
 		552FF0242932E56800BD8FC8 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF0232932E56800BD8FC8 /* FirebaseAuthService.swift */; };
 		552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF0292932F89A00BD8FC8 /* LoginViewController.swift */; };
-		552FF030293302E300BD8FC8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF02F293302E300BD8FC8 /* LoginView.swift */; };
 		552FF0362933118300BD8FC8 /* Lato in Resources */ = {isa = PBXBuildFile; fileRef = 552FF0352933118300BD8FC8 /* Lato */; };
 		5535D01F293321CE00E64C2B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5535D01E293321CE00E64C2B /* SignUpViewController.swift */; };
 		553BCA5F291337FA008A2847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553BCA5E291337FA008A2847 /* Assets.xcassets */; };
@@ -20,6 +21,8 @@
 		55456DAF2934A91100AF1AFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DAE2934A91100AF1AFF /* HomeViewController.swift */; };
 		55456DB12934B48F00AF1AFF /* AccountDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */; };
 		55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DB32935239800AF1AFF /* CarouselImage.swift */; };
+		55946A5829382BA9000178BF /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 55946A5729382BA9000178BF /* CodeScanner */; };
+		55946A5A29382D98000178BF /* CodeScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55946A5929382D98000178BF /* CodeScannerView.swift */; };
 		55A7E263291A78E5002F833D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E256291A78B2002F833D /* Roboto-Medium.ttf */; };
 		55A7E264291A78E8002F833D /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E257291A78B2002F833D /* Roboto-Light.ttf */; };
 		55A7E265291A78EA002F833D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E258291A78B2002F833D /* Roboto-Regular.ttf */; };
@@ -44,7 +47,10 @@
 		55BE61332915C309007A7B34 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 55BE61322915C309007A7B34 /* FirebaseStorage */; };
 		55C669632913C0CE0054734C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C669622913C0CE0054734C /* Launch Screen.storyboard */; };
 		55DB8A2A2936286C00A1C238 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8A292936286C00A1C238 /* Event.swift */; };
+		55DB8A2D29362AD000A1C238 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8A2C29362AD000A1C238 /* EventViewController.swift */; };
 		55EA44832919C4070095D8E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EA44822919C4070095D8E5 /* Main.storyboard */; };
+		6D2F115A81178163D7BE561B /* Pods_TechVirtualMuseum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3867CC6DF6DD331552F2EB61 /* Pods_TechVirtualMuseum.framework */; };
+		9FD33421924837899EBC90D3 /* Pods_TechVirtualMuseum_TechVirtualMuseumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD3CC9A7D18BD4F206741A4 /* Pods_TechVirtualMuseum_TechVirtualMuseumUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,9 +71,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0818AD0861428A2AD76D119C /* Pods-TechVirtualMuseum-TechVirtualMuseumUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechVirtualMuseum-TechVirtualMuseumUITests.release.xcconfig"; path = "Target Support Files/Pods-TechVirtualMuseum-TechVirtualMuseumUITests/Pods-TechVirtualMuseum-TechVirtualMuseumUITests.release.xcconfig"; sourceTree = "<group>"; };
+		18F321E6EBD30EA4C2B9F2C1 /* Pods-TechVirtualMuseumTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechVirtualMuseumTests.release.xcconfig"; path = "Target Support Files/Pods-TechVirtualMuseumTests/Pods-TechVirtualMuseumTests.release.xcconfig"; sourceTree = "<group>"; };
+		3867CC6DF6DD331552F2EB61 /* Pods_TechVirtualMuseum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechVirtualMuseum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CD3CC9A7D18BD4F206741A4 /* Pods_TechVirtualMuseum_TechVirtualMuseumUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechVirtualMuseum_TechVirtualMuseumUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C5BE0C937F0844BE65A5736 /* Pods-TechVirtualMuseum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechVirtualMuseum.release.xcconfig"; path = "Target Support Files/Pods-TechVirtualMuseum/Pods-TechVirtualMuseum.release.xcconfig"; sourceTree = "<group>"; };
+		5502161129366FE700CFC800 /* EventsFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsFirebase.swift; sourceTree = "<group>"; };
 		552FF0232932E56800BD8FC8 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		552FF0292932F89A00BD8FC8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		552FF02F293302E300BD8FC8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		552FF0352933118300BD8FC8 /* Lato */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Lato; sourceTree = "<group>"; };
 		5535D01E293321CE00E64C2B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5535D020293324BA00E64C2B /* TechVirtualMuseum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TechVirtualMuseum.entitlements; sourceTree = "<group>"; };
@@ -83,6 +94,8 @@
 		55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataViewController.swift; sourceTree = "<group>"; };
 		55456DB32935239800AF1AFF /* CarouselImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselImage.swift; sourceTree = "<group>"; };
 		5567EE84293194690061C988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5569AA9D7FC0138DEFCA134A /* Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig"; path = "Target Support Files/Pods-TechVirtualMuseum-TechVirtualMuseumUITests/Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		55946A5929382D98000178BF /* CodeScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScannerView.swift; sourceTree = "<group>"; };
 		55A7E256291A78B2002F833D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		55A7E257291A78B2002F833D /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		55A7E258291A78B2002F833D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -100,7 +113,11 @@
 		55BE61252915BD8B007A7B34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		55C669622913C0CE0054734C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		55DB8A292936286C00A1C238 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		55DB8A2C29362AD000A1C238 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		55EA44822919C4070095D8E5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		92E24D224894A806FE7B3861 /* Pods-TechVirtualMuseumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechVirtualMuseumTests.debug.xcconfig"; path = "Target Support Files/Pods-TechVirtualMuseumTests/Pods-TechVirtualMuseumTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D3E7623CBF82780B831E614C /* Pods_TechVirtualMuseumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechVirtualMuseumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFE49A1BACF16364206B3C09 /* Pods-TechVirtualMuseum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechVirtualMuseum.debug.xcconfig"; path = "Target Support Files/Pods-TechVirtualMuseum/Pods-TechVirtualMuseum.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +130,8 @@
 				55BE612B2915C309007A7B34 /* FirebaseAnalytics in Frameworks */,
 				55BE61332915C309007A7B34 /* FirebaseStorage in Frameworks */,
 				55BE612D2915C309007A7B34 /* FirebaseAuth in Frameworks */,
+				55946A5829382BA9000178BF /* CodeScanner in Frameworks */,
+				6D2F115A81178163D7BE561B /* Pods_TechVirtualMuseum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35DFB6BBDA57E580584B19C7 /* Pods_TechVirtualMuseumTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD33421924837899EBC90D3 /* Pods_TechVirtualMuseum_TechVirtualMuseumUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +157,7 @@
 		552FF01B2932D55D00BD8FC8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				552FF02F293302E300BD8FC8 /* LoginView.swift */,
+				55946A5929382D98000178BF /* CodeScannerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -157,6 +178,7 @@
 				5535D01E293321CE00E64C2B /* SignUpViewController.swift */,
 				55456DAE2934A91100AF1AFF /* HomeViewController.swift */,
 				55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */,
+				55DB8A2C29362AD000A1C238 /* EventViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +191,8 @@
 				553BCA6A291337FB008A2847 /* TechVirtualMuseumTests */,
 				553BCA74291337FB008A2847 /* TechVirtualMuseumUITests */,
 				553BCA58291337F4008A2847 /* Products */,
+				9D6752FB183F6D93754406BF /* Pods */,
+				ADA53001CB84F0C697A5E5CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -231,6 +255,7 @@
 			children = (
 				55456DB32935239800AF1AFF /* CarouselImage.swift */,
 				55DB8A292936286C00A1C238 /* Event.swift */,
+				5502161129366FE700CFC800 /* EventsFirebase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,6 +288,29 @@
 			path = Roboto;
 			sourceTree = "<group>";
 		};
+		9D6752FB183F6D93754406BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FFE49A1BACF16364206B3C09 /* Pods-TechVirtualMuseum.debug.xcconfig */,
+				4C5BE0C937F0844BE65A5736 /* Pods-TechVirtualMuseum.release.xcconfig */,
+				5569AA9D7FC0138DEFCA134A /* Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig */,
+				0818AD0861428A2AD76D119C /* Pods-TechVirtualMuseum-TechVirtualMuseumUITests.release.xcconfig */,
+				92E24D224894A806FE7B3861 /* Pods-TechVirtualMuseumTests.debug.xcconfig */,
+				18F321E6EBD30EA4C2B9F2C1 /* Pods-TechVirtualMuseumTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ADA53001CB84F0C697A5E5CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3867CC6DF6DD331552F2EB61 /* Pods_TechVirtualMuseum.framework */,
+				3CD3CC9A7D18BD4F206741A4 /* Pods_TechVirtualMuseum_TechVirtualMuseumUITests.framework */,
+				D3E7623CBF82780B831E614C /* Pods_TechVirtualMuseumTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -270,9 +318,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 553BCA7B291337FB008A2847 /* Build configuration list for PBXNativeTarget "TechVirtualMuseum" */;
 			buildPhases = (
+				7E8C70322136F91B74DB68F1 /* [CP] Check Pods Manifest.lock */,
 				553BCA53291337F4008A2847 /* Sources */,
 				553BCA54291337F4008A2847 /* Frameworks */,
 				553BCA55291337F4008A2847 /* Resources */,
+				DAF92DC02B1A065E13DB6FD2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -285,6 +335,7 @@
 				55BE612E2915C309007A7B34 /* FirebaseDatabase */,
 				55BE61302915C309007A7B34 /* FirebaseFirestore */,
 				55BE61322915C309007A7B34 /* FirebaseStorage */,
+				55946A5729382BA9000178BF /* CodeScanner */,
 			);
 			productName = TechVirtualMuseum;
 			productReference = 553BCA57291337F4008A2847 /* TechVirtualMuseum.app */;
@@ -294,6 +345,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 553BCA7E291337FB008A2847 /* Build configuration list for PBXNativeTarget "TechVirtualMuseumTests" */;
 			buildPhases = (
+				60F173B03C8473AAAAFB6B07 /* [CP] Check Pods Manifest.lock */,
 				553BCA63291337FB008A2847 /* Sources */,
 				553BCA64291337FB008A2847 /* Frameworks */,
 				553BCA65291337FB008A2847 /* Resources */,
@@ -312,9 +364,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 553BCA81291337FB008A2847 /* Build configuration list for PBXNativeTarget "TechVirtualMuseumUITests" */;
 			buildPhases = (
+				DC45581F9410B9F7B9364D31 /* [CP] Check Pods Manifest.lock */,
 				553BCA6D291337FB008A2847 /* Sources */,
 				553BCA6E291337FB008A2847 /* Frameworks */,
 				553BCA6F291337FB008A2847 /* Resources */,
+				1267EDF3FCEC7A55DCC56157 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -360,6 +414,7 @@
 			mainGroup = 553BCA4E291337F4008A2847;
 			packageReferences = (
 				55BE61292915C309007A7B34 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				55946A5629382BA9000178BF /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = 553BCA58291337F4008A2847 /* Products */;
 			projectDirPath = "";
@@ -416,18 +471,123 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1267EDF3FCEC7A55DCC56157 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TechVirtualMuseum-TechVirtualMuseumUITests/Pods-TechVirtualMuseum-TechVirtualMuseumUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TechVirtualMuseum-TechVirtualMuseumUITests/Pods-TechVirtualMuseum-TechVirtualMuseumUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TechVirtualMuseum-TechVirtualMuseumUITests/Pods-TechVirtualMuseum-TechVirtualMuseumUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60F173B03C8473AAAAFB6B07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TechVirtualMuseumTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E8C70322136F91B74DB68F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TechVirtualMuseum-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAF92DC02B1A065E13DB6FD2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TechVirtualMuseum/Pods-TechVirtualMuseum-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TechVirtualMuseum/Pods-TechVirtualMuseum-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TechVirtualMuseum/Pods-TechVirtualMuseum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC45581F9410B9F7B9364D31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TechVirtualMuseum-TechVirtualMuseumUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		553BCA53291337F4008A2847 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				55456DB12934B48F00AF1AFF /* AccountDataViewController.swift in Sources */,
+				55DB8A2D29362AD000A1C238 /* EventViewController.swift in Sources */,
 				55DB8A2A2936286C00A1C238 /* Event.swift in Sources */,
 				552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */,
+				55946A5A29382D98000178BF /* CodeScannerView.swift in Sources */,
 				55B0CDED293432D700C7D96B /* TechVirtualMuseumApp.swift in Sources */,
+				5502161229366FE700CFC800 /* EventsFirebase.swift in Sources */,
 				552FF0242932E56800BD8FC8 /* FirebaseAuthService.swift in Sources */,
 				55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */,
-				552FF030293302E300BD8FC8 /* LoginView.swift in Sources */,
 				5535D01F293321CE00E64C2B /* SignUpViewController.swift in Sources */,
 				55456DAF2934A91100AF1AFF /* HomeViewController.swift in Sources */,
 				55B0CDEF293445F900C7D96B /* FirestoreService.swift in Sources */,
@@ -583,6 +743,7 @@
 		};
 		553BCA7C291337FB008A2847 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFE49A1BACF16364206B3C09 /* Pods-TechVirtualMuseum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -616,6 +777,7 @@
 		};
 		553BCA7D291337FB008A2847 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C5BE0C937F0844BE65A5736 /* Pods-TechVirtualMuseum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -649,6 +811,7 @@
 		};
 		553BCA7F291337FB008A2847 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92E24D224894A806FE7B3861 /* Pods-TechVirtualMuseumTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -669,6 +832,7 @@
 		};
 		553BCA80291337FB008A2847 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18F321E6EBD30EA4C2B9F2C1 /* Pods-TechVirtualMuseumTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -689,6 +853,7 @@
 		};
 		553BCA82291337FB008A2847 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5569AA9D7FC0138DEFCA134A /* Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -707,6 +872,7 @@
 		};
 		553BCA83291337FB008A2847 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0818AD0861428A2AD76D119C /* Pods-TechVirtualMuseum-TechVirtualMuseumUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -765,6 +931,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		55946A5629382BA9000178BF /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		55BE61292915C309007A7B34 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -776,6 +950,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		55946A5729382BA9000178BF /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55946A5629382BA9000178BF /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
 		55BE612A2915C309007A7B34 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 55BE61292915C309007A7B34 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

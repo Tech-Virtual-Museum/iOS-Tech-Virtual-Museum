@@ -1,13 +1,13 @@
 //
-//  LoginView.swift
+//  CodeScannerView.swift
 //  TechVirtualMuseum
 //
-//  Created by Nahima Ortega on 27/11/22.
+//  Created by Nahima Ortega on 1/12/22.
 //
 
 import UIKit
 
-class LoginView: UIView {
+class CodeScannerView: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
