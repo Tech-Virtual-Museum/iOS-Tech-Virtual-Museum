@@ -156,21 +156,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		552FF01B2932D55D00BD8FC8 /* view */ = {
+		552FF01B2932D55D00BD8FC8 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				554E2A5829397F40009DCEC0 /* QRScannerView.swift */,
 			);
-			path = view;
+			path = View;
 			sourceTree = "<group>";
 		};
-		552FF01E2932E51D00BD8FC8 /* services */ = {
+		552FF01E2932E51D00BD8FC8 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				552FF0232932E56800BD8FC8 /* FirebaseAuthService.swift */,
 				55B0CDEE293445F900C7D96B /* FirestoreService.swift */,
 			);
-			path = services;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		552FF0282932F86A00BD8FC8 /* Controller */ = {
@@ -212,11 +212,11 @@
 		553BCA59291337F4008A2847 /* TechVirtualMuseum */ = {
 			isa = PBXGroup;
 			children = (
-				55456DB229351FED00AF1AFF /* model */,
+				55456DB229351FED00AF1AFF /* Model */,
 				5535D020293324BA00E64C2B /* TechVirtualMuseum.entitlements */,
 				552FF0282932F86A00BD8FC8 /* Controller */,
-				552FF01E2932E51D00BD8FC8 /* services */,
-				552FF01B2932D55D00BD8FC8 /* view */,
+				552FF01E2932E51D00BD8FC8 /* Services */,
+				552FF01B2932D55D00BD8FC8 /* View */,
 				55EA44822919C4070095D8E5 /* Main.storyboard */,
 				55BE61252915BD8B007A7B34 /* GoogleService-Info.plist */,
 				553BCA5E291337FA008A2847 /* Assets.xcassets */,
@@ -253,14 +253,14 @@
 			path = TechVirtualMuseumUITests;
 			sourceTree = "<group>";
 		};
-		55456DB229351FED00AF1AFF /* model */ = {
+		55456DB229351FED00AF1AFF /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				55456DB32935239800AF1AFF /* CarouselImage.swift */,
 				55DB8A292936286C00A1C238 /* Event.swift */,
 				5502161129366FE700CFC800 /* EventsFirebase.swift */,
 			);
-			path = model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		55A7E254291A78A7002F833D /* fonts */ = {
