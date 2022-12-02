@@ -21,6 +21,7 @@
 		55456DAF2934A91100AF1AFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DAE2934A91100AF1AFF /* HomeViewController.swift */; };
 		55456DB12934B48F00AF1AFF /* AccountDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */; };
 		55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DB32935239800AF1AFF /* CarouselImage.swift */; };
+		554E2A5929397F40009DCEC0 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A5829397F40009DCEC0 /* QRScannerView.swift */; };
 		55946A5829382BA9000178BF /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 55946A5729382BA9000178BF /* CodeScanner */; };
 		55946A5C29382F60000178BF /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55946A5B29382F60000178BF /* QRScannerViewController.swift */; };
 		55A7E263291A78E5002F833D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E256291A78B2002F833D /* Roboto-Medium.ttf */; };
@@ -93,6 +94,7 @@
 		55456DAE2934A91100AF1AFF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataViewController.swift; sourceTree = "<group>"; };
 		55456DB32935239800AF1AFF /* CarouselImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselImage.swift; sourceTree = "<group>"; };
+		554E2A5829397F40009DCEC0 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		5567EE84293194690061C988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5569AA9D7FC0138DEFCA134A /* Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig"; path = "Target Support Files/Pods-TechVirtualMuseum-TechVirtualMuseumUITests/Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		55946A5B29382F60000178BF /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		552FF01B2932D55D00BD8FC8 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				554E2A5829397F40009DCEC0 /* QRScannerView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -587,6 +590,7 @@
 				5502161229366FE700CFC800 /* EventsFirebase.swift in Sources */,
 				552FF0242932E56800BD8FC8 /* FirebaseAuthService.swift in Sources */,
 				55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */,
+				554E2A5929397F40009DCEC0 /* QRScannerView.swift in Sources */,
 				55946A5C29382F60000178BF /* QRScannerViewController.swift in Sources */,
 				5535D01F293321CE00E64C2B /* SignUpViewController.swift in Sources */,
 				55456DAF2934A91100AF1AFF /* HomeViewController.swift in Sources */,
