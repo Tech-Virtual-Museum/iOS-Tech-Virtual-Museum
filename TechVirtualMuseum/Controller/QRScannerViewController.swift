@@ -1,0 +1,28 @@
+//
+//  QRScannerViewController.swift
+//  TechVirtualMuseum
+//
+//  Created by Nahima Ortega on 1/12/22.
+//
+
+import UIKit
+import AVFoundation
+import SwiftUI
+
+class QRScannerViewController: UIHostingController<QRScannerView> {
+    required init?(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder, rootView: QRScannerView())
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
