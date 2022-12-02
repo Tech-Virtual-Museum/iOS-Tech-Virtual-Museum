@@ -12,7 +12,6 @@
 		552FF0242932E56800BD8FC8 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF0232932E56800BD8FC8 /* FirebaseAuthService.swift */; };
 		552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF0292932F89A00BD8FC8 /* LoginViewController.swift */; };
 		552FF0362933118300BD8FC8 /* Lato in Resources */ = {isa = PBXBuildFile; fileRef = 552FF0352933118300BD8FC8 /* Lato */; };
-		5535D01F293321CE00E64C2B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5535D01E293321CE00E64C2B /* SignUpViewController.swift */; };
 		553BCA5F291337FA008A2847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553BCA5E291337FA008A2847 /* Assets.xcassets */; };
 		553BCA62291337FA008A2847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553BCA61291337FA008A2847 /* Preview Assets.xcassets */; };
 		553BCA6C291337FB008A2847 /* TechVirtualMuseumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BCA6B291337FB008A2847 /* TechVirtualMuseumTests.swift */; };
@@ -22,6 +21,7 @@
 		55456DB12934B48F00AF1AFF /* AccountDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */; };
 		55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DB32935239800AF1AFF /* CarouselImage.swift */; };
 		554E2A5929397F40009DCEC0 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A5829397F40009DCEC0 /* QRScannerView.swift */; };
+		554E2A5D2939889A009DCEC0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A5C2939889A009DCEC0 /* SignUpViewController.swift */; };
 		55946A5829382BA9000178BF /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 55946A5729382BA9000178BF /* CodeScanner */; };
 		55946A5C29382F60000178BF /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55946A5B29382F60000178BF /* QRScannerViewController.swift */; };
 		55A7E263291A78E5002F833D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E256291A78B2002F833D /* Roboto-Medium.ttf */; };
@@ -81,7 +81,6 @@
 		552FF0232932E56800BD8FC8 /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 		552FF0292932F89A00BD8FC8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		552FF0352933118300BD8FC8 /* Lato */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Lato; sourceTree = "<group>"; };
-		5535D01E293321CE00E64C2B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5535D020293324BA00E64C2B /* TechVirtualMuseum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TechVirtualMuseum.entitlements; sourceTree = "<group>"; };
 		553BCA57291337F4008A2847 /* TechVirtualMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechVirtualMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553BCA5E291337FA008A2847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataViewController.swift; sourceTree = "<group>"; };
 		55456DB32935239800AF1AFF /* CarouselImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselImage.swift; sourceTree = "<group>"; };
 		554E2A5829397F40009DCEC0 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		554E2A5C2939889A009DCEC0 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5567EE84293194690061C988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5569AA9D7FC0138DEFCA134A /* Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig"; path = "Target Support Files/Pods-TechVirtualMuseum-TechVirtualMuseumUITests/Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		55946A5B29382F60000178BF /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
@@ -176,8 +176,8 @@
 		552FF0282932F86A00BD8FC8 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				554E2A5C2939889A009DCEC0 /* SignUpViewController.swift */,
 				552FF0292932F89A00BD8FC8 /* LoginViewController.swift */,
-				5535D01E293321CE00E64C2B /* SignUpViewController.swift */,
 				55456DAE2934A91100AF1AFF /* HomeViewController.swift */,
 				55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */,
 				55DB8A2C29362AD000A1C238 /* EventViewController.swift */,
@@ -590,9 +590,9 @@
 				5502161229366FE700CFC800 /* EventsFirebase.swift in Sources */,
 				552FF0242932E56800BD8FC8 /* FirebaseAuthService.swift in Sources */,
 				55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */,
+				554E2A5D2939889A009DCEC0 /* SignUpViewController.swift in Sources */,
 				554E2A5929397F40009DCEC0 /* QRScannerView.swift in Sources */,
 				55946A5C29382F60000178BF /* QRScannerViewController.swift in Sources */,
-				5535D01F293321CE00E64C2B /* SignUpViewController.swift in Sources */,
 				55456DAF2934A91100AF1AFF /* HomeViewController.swift in Sources */,
 				55B0CDEF293445F900C7D96B /* FirestoreService.swift in Sources */,
 			);
