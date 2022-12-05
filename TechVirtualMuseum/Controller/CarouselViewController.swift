@@ -6,13 +6,12 @@
 //
 
 import UIKit
+import SwiftUI
 
-class CarouselViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class CarouselViewController: UIHostingController<CarouselView> {
+    required init?(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder, rootView: CarouselView())
     }
     
 

@@ -38,6 +38,8 @@
 		55A7E26E291A790A002F833D /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E262291A78B2002F833D /* Roboto-Black.ttf */; };
 		55AD6910293E2B2500A8620D /* Pods_TechVirtualMuseum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3867CC6DF6DD331552F2EB61 /* Pods_TechVirtualMuseum.framework */; };
 		55AD6917293E8EA400A8620D /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD6916293E8EA400A8620D /* CarouselViewController.swift */; };
+		55AD691B293E901000A8620D /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD691A293E901000A8620D /* CarouselView.swift */; };
+		55AD691D293E963200A8620D /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 55AD691C293E963200A8620D /* ACarousel */; };
 		55B0CDED293432D700C7D96B /* TechVirtualMuseumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0CDEC293432D700C7D96B /* TechVirtualMuseumApp.swift */; };
 		55B0CDEF293445F900C7D96B /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0CDEE293445F900C7D96B /* FirestoreService.swift */; };
 		55BE61262915BD8B007A7B34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BE61252915BD8B007A7B34 /* GoogleService-Info.plist */; };
@@ -112,6 +114,7 @@
 		55A7E261291A78B2002F833D /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		55A7E262291A78B2002F833D /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		55AD6916293E8EA400A8620D /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
+		55AD691A293E901000A8620D /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		55B0CDEC293432D700C7D96B /* TechVirtualMuseumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechVirtualMuseumApp.swift; sourceTree = "<group>"; };
 		55B0CDEE293445F900C7D96B /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		55BE61252915BD8B007A7B34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -129,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55AD691D293E963200A8620D /* ACarousel in Frameworks */,
 				55BE612F2915C309007A7B34 /* FirebaseDatabase in Frameworks */,
 				55BE61312915C309007A7B34 /* FirebaseFirestore in Frameworks */,
 				55AD6910293E2B2500A8620D /* Pods_TechVirtualMuseum.framework in Frameworks */,
@@ -162,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				554E2A5829397F40009DCEC0 /* QRScannerView.swift */,
+				55AD691A293E901000A8620D /* CarouselView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 				55BE61302915C309007A7B34 /* FirebaseFirestore */,
 				55BE61322915C309007A7B34 /* FirebaseStorage */,
 				55946A5729382BA9000178BF /* CodeScanner */,
+				55AD691C293E963200A8620D /* ACarousel */,
 			);
 			productName = TechVirtualMuseum;
 			productReference = 553BCA57291337F4008A2847 /* TechVirtualMuseum.app */;
@@ -596,6 +602,7 @@
 				55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */,
 				55AD6917293E8EA400A8620D /* CarouselViewController.swift in Sources */,
 				554E2A5929397F40009DCEC0 /* QRScannerView.swift in Sources */,
+				55AD691B293E901000A8620D /* CarouselView.swift in Sources */,
 				55946A5C29382F60000178BF /* QRScannerViewController.swift in Sources */,
 				55456DAF2934A91100AF1AFF /* HomeViewController.swift in Sources */,
 				554E2A6129398BC1009DCEC0 /* SignUpViewController.swift in Sources */,
@@ -973,6 +980,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 55946A5629382BA9000178BF /* XCRemoteSwiftPackageReference "CodeScanner" */;
 			productName = CodeScanner;
+		};
+		55AD691C293E963200A8620D /* ACarousel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55AD6913293E31F700A8620D /* XCRemoteSwiftPackageReference "ACarousel" */;
+			productName = ACarousel;
 		};
 		55BE612A2915C309007A7B34 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
