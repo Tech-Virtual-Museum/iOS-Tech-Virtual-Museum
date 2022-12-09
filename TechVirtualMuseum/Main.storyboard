@@ -549,7 +549,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="JXA-UG-cok">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ir9-cH-DyR" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ir9-cH-DyR" customClass="TabBarController" customModule="TechVirtualMuseum" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="go7-7e-SW8">
@@ -560,7 +560,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="szi-IY-BTF" kind="relationship" relationship="viewControllers" id="bFp-gw-rsk"/>
-                        <segue destination="6C6-1t-I6g" kind="relationship" relationship="viewControllers" id="CPz-Ci-Hh3"/>
+                        <segue destination="6C6-1t-I6g" kind="relationship" relationship="viewControllers" id="vFg-0b-jXo"/>
                         <segue destination="k0a-sz-4VA" kind="relationship" relationship="viewControllers" id="2u3-oD-Biv"/>
                     </connections>
                 </tabBarController>

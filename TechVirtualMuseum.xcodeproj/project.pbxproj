@@ -13,6 +13,7 @@
 		552FF0242932E56800BD8FC8 /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF0232932E56800BD8FC8 /* FirebaseAuthService.swift */; };
 		552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552FF0292932F89A00BD8FC8 /* LoginViewController.swift */; };
 		552FF0362933118300BD8FC8 /* Lato in Resources */ = {isa = PBXBuildFile; fileRef = 552FF0352933118300BD8FC8 /* Lato */; };
+		553875C32943B6200097B066 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553875C22943B6200097B066 /* TabBarController.swift */; };
 		553BCA62291337FA008A2847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 553BCA61291337FA008A2847 /* Preview Assets.xcassets */; };
 		553BCA6C291337FB008A2847 /* TechVirtualMuseumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BCA6B291337FB008A2847 /* TechVirtualMuseumTests.swift */; };
 		553BCA76291337FB008A2847 /* TechVirtualMuseumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BCA75291337FB008A2847 /* TechVirtualMuseumUITests.swift */; };
@@ -86,6 +87,7 @@
 		552FF0292932F89A00BD8FC8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		552FF0352933118300BD8FC8 /* Lato */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Lato; sourceTree = "<group>"; };
 		5535D020293324BA00E64C2B /* TechVirtualMuseum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TechVirtualMuseum.entitlements; sourceTree = "<group>"; };
+		553875C22943B6200097B066 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		553BCA57291337F4008A2847 /* TechVirtualMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechVirtualMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		553BCA61291337FA008A2847 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		553BCA67291337FB008A2847 /* TechVirtualMuseumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechVirtualMuseumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +192,7 @@
 				55946A5B29382F60000178BF /* QRScannerViewController.swift */,
 				554E2A6029398BC1009DCEC0 /* SignUpViewController.swift */,
 				55AD6916293E8EA400A8620D /* CarouselViewController.swift */,
+				553875C22943B6200097B066 /* TabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -593,6 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55456DB12934B48F00AF1AFF /* AccountDataViewController.swift in Sources */,
+				553875C32943B6200097B066 /* TabBarController.swift in Sources */,
 				55DB8A2D29362AD000A1C238 /* EventViewController.swift in Sources */,
 				55DB8A2A2936286C00A1C238 /* Event.swift in Sources */,
 				552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */,
