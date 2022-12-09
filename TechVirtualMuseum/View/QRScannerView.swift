@@ -12,6 +12,7 @@ struct QRScannerView: View {
     
     @State var presentingScannerView = true
     @State var scannedQRCode = "Scan the QR Code"
+    @State var isHiddenLoader: Bool = false
     
     var scanner: some View {
         CodeScannerView(codeTypes: [.qr], shouldVibrateOnSuccess: true, completion: {result in if case let .success(code) = result {
@@ -22,11 +23,14 @@ struct QRScannerView: View {
     
     
     var body: some View {
-        VStack {
-            Text("Scanning...")
-                .padding()
-                .foregroundColor(.black)
-                .font(.custom("Roboto Black", size: 28))
+        ZStack(alignment: .top) {
+            HStack {
+                Text("Scanning...")
+                    .padding()
+                    .foregroundColor(.black)
+                    .font(.custom("Roboto Black", size: 24))
+                LoaderView()
+            }
             self.scanner
         }
     }
