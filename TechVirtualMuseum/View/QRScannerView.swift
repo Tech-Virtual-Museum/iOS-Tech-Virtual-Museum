@@ -11,12 +11,13 @@ import CodeScanner
 struct QRScannerView: View {
     
     @State var presentingScannerView = true
-    @State var scannedQRCode = "Scan the QR Code"
+    @State var scannedQRCode = ""
     @State var isHiddenLoader: Bool = false
     
     var scanner: some View {
         CodeScannerView(codeTypes: [.qr], shouldVibrateOnSuccess: true, completion: {result in if case let .success(code) = result {
             self.scannedQRCode = code.string
+            print(self.scannedQRCode)
             self.presentingScannerView = false
         }})
     }
