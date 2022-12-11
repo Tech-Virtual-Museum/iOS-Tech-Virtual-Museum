@@ -35,12 +35,19 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         view.addSubview(tableView)
             tableView.translatesAutoresizingMaskIntoConstraints = false
             let tableViewTopConstraint = tableView.topAnchor.constraint(equalTo: view.topAnchor)
-            tableViewTopConstraint.constant = +100
+            tableViewTopConstraint.constant = +150
+        
+            let tableViewLeadingConstraint = tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+            tableViewLeadingConstraint.constant = +10
+        
+            let tableViewTrailingConstraint = tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+            tableViewTrailingConstraint.constant = -10
             NSLayoutConstraint.activate([
               tableViewTopConstraint,
               tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-              tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-              tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+              tableViewLeadingConstraint,
+              //tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+              //tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
             ])
 
             // Set the view controller as the data source and delegate of the table view
@@ -98,9 +105,12 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if let customCell = cell as? CustomNewCell {
-            customCell.layer.cornerRadius = 10
-        }
+        cell.layer.cornerRadius = 20
+        cell.layoutMargins = UIEdgeInsets(top: 20, left: 16, bottom: 20, right: 16)
+        cell.separatorInset = UIEdgeInsets(top: 20, left: 16, bottom: 20, right: 16)
+        cell.preservesSuperviewLayoutMargins = false
+        cell.layer.borderWidth = 20
+        cell.layer.borderColor = UIColor.clear.cgColor
     }
     
 
