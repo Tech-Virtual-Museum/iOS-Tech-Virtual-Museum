@@ -10,11 +10,22 @@ import UIKit
 class EventDetailsViewController: UIViewController {
     
     var selectedItem: [String: Any]?
-
+    
+    @IBOutlet weak var eventImage: UIImageView!
+    @IBOutlet weak var eventName: UILabel!
+    @IBOutlet weak var eventDate: UILabel!
+    @IBOutlet weak var eventHour: UILabel!
+    @IBOutlet weak var eventPricing: UIButton!
+    @IBOutlet weak var eventDescription: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(selectedItem)
+        eventName.text = selectedItem?["name"] as? String
+        eventDate.text = selectedItem?["date"] as? String
+        eventHour.text = selectedItem?["hour"] as? String
+        eventPricing.configuration?.title = selectedItem?["pricing"] as? String
+        eventDescription.text = selectedItem?["description"] as? String
         // Do any additional setup after loading the view.
     }
     

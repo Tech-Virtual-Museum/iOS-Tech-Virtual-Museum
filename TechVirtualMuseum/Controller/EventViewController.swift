@@ -75,7 +75,6 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
           //print(items[indexPath.row]["name"] as? String)
           
           let item = items[indexPath.row]
-          print(item)
           cell.eventTitle?.text = item["name"] as? String
           cell.eventDate?.text = item["date"] as? String
           cell.eventHour?.text = item["hour"] as? String
@@ -121,17 +120,38 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.layer.borderColor = UIColor.white.cgColor
     }
     
+    /*
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            // Create an instance of the view controller you want to navigate to
-            let vc = EventDetailsViewController()
+            // Get the selected item from the items array
+            let selectedItem = items[indexPath.row]
+        
+            print(selectedItem)
+        
+            if let presentedVC = self.presentedViewController as? EventDetailsViewController {
+                presentedVC.dismiss(animated: true, completion: {
+                    self.performSegue(withIdentifier: "showEventDetails", sender: selectedItem)
+                })
+            } else {
+                performSegue(withIdentifier: "showEventDetails", sender: selectedItem)
+            }
             
-            // Set any properties on the view controller that you want to pass
-            // along to the next view controller
-            vc.selectedItem = items[indexPath.row]
-            
-            // Use the navigation controller to push the view controller onto the stack
-            navigationController?.pushViewController(vc, animated: true)
+            // Perform the segue with the identifier you defined in the storyboard
+            //performSegue(withIdentifier: "showEventDetails", sender: selectedItem)
+        }
+     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showEventDetails" {
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)!
+            let data = items[indexPath.row]
+
+            let destinationVC = segue.destination as! EventDetailsViewController
+            destinationVC.selectedItem = data
+        }
     }
+    
+    
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredItems = searchText.isEmpty ? items : items.filter { (item: [String: Any]) -> Bool in
