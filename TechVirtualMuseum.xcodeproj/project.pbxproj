@@ -55,6 +55,7 @@
 		55C669632913C0CE0054734C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C669622913C0CE0054734C /* Launch Screen.storyboard */; };
 		55DB8A2A2936286C00A1C238 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8A292936286C00A1C238 /* Event.swift */; };
 		55DB8A2D29362AD000A1C238 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8A2C29362AD000A1C238 /* EventViewController.swift */; };
+		55DFFCDD294654E6007E4A5A /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFFCDC294654E6007E4A5A /* EventDetailsViewController.swift */; };
 		55EA44832919C4070095D8E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EA44822919C4070095D8E5 /* Main.storyboard */; };
 		9FD33421924837899EBC90D3 /* Pods_TechVirtualMuseum_TechVirtualMuseumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD3CC9A7D18BD4F206741A4 /* Pods_TechVirtualMuseum_TechVirtualMuseumUITests.framework */; };
 /* End PBXBuildFile section */
@@ -125,6 +126,7 @@
 		55C669622913C0CE0054734C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		55DB8A292936286C00A1C238 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		55DB8A2C29362AD000A1C238 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		55DFFCDC294654E6007E4A5A /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		55EA44822919C4070095D8E5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		92E24D224894A806FE7B3861 /* Pods-TechVirtualMuseumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechVirtualMuseumTests.debug.xcconfig"; path = "Target Support Files/Pods-TechVirtualMuseumTests/Pods-TechVirtualMuseumTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3E7623CBF82780B831E614C /* Pods_TechVirtualMuseumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechVirtualMuseumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +197,7 @@
 				554E2A6029398BC1009DCEC0 /* SignUpViewController.swift */,
 				55AD6916293E8EA400A8620D /* CarouselViewController.swift */,
 				553875C22943B6200097B066 /* TabBarController.swift */,
+				55DFFCDC294654E6007E4A5A /* EventDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				55DB8A2A2936286C00A1C238 /* Event.swift in Sources */,
 				552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */,
 				55B0CDED293432D700C7D96B /* TechVirtualMuseumApp.swift in Sources */,
+				55DFFCDD294654E6007E4A5A /* EventDetailsViewController.swift in Sources */,
 				5502161229366FE700CFC800 /* EventsFirebase.swift in Sources */,
 				552FF0242932E56800BD8FC8 /* FirebaseAuthService.swift in Sources */,
 				55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */,
