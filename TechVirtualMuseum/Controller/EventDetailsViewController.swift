@@ -24,7 +24,7 @@ class EventDetailsViewController: UIViewController {
         eventName.text = selectedItem?["name"] as? String
         eventDate.text = selectedItem?["date"] as? String
         eventHour.text = selectedItem?["hour"] as? String
-        eventPricing.configuration?.title = selectedItem?["pricing"] as? String
+        eventPricing.configuration?.title = (selectedItem?["pricing"] as? String ?? "") + "€"
         eventDescription.text = selectedItem?["description"] as? String
         if let url = URL(string: selectedItem?["largerImgUrl"] as! String) {
             let session = URLSession(configuration: .default)

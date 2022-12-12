@@ -55,6 +55,7 @@
 		55C669632913C0CE0054734C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C669622913C0CE0054734C /* Launch Screen.storyboard */; };
 		55DB8A2A2936286C00A1C238 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8A292936286C00A1C238 /* Event.swift */; };
 		55DB8A2D29362AD000A1C238 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DB8A2C29362AD000A1C238 /* EventViewController.swift */; };
+		55DD6A1229477205000D3844 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD6A1129477205000D3844 /* PurchaseViewController.swift */; };
 		55DFFCDD294654E6007E4A5A /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFFCDC294654E6007E4A5A /* EventDetailsViewController.swift */; };
 		55DFFCDF2946B253007E4A5A /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFFCDE2946B253007E4A5A /* ProductDetailsViewController.swift */; };
 		55EA44832919C4070095D8E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EA44822919C4070095D8E5 /* Main.storyboard */; };
@@ -127,6 +128,7 @@
 		55C669622913C0CE0054734C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		55DB8A292936286C00A1C238 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		55DB8A2C29362AD000A1C238 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		55DD6A1129477205000D3844 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		55DFFCDC294654E6007E4A5A /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		55DFFCDE2946B253007E4A5A /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		55EA44822919C4070095D8E5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				553875C22943B6200097B066 /* TabBarController.swift */,
 				55DFFCDC294654E6007E4A5A /* EventDetailsViewController.swift */,
 				55DFFCDE2946B253007E4A5A /* ProductDetailsViewController.swift */,
+				55DD6A1129477205000D3844 /* PurchaseViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				55DB8A2D29362AD000A1C238 /* EventViewController.swift in Sources */,
 				55DB8A2A2936286C00A1C238 /* Event.swift in Sources */,
 				552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */,
+				55DD6A1229477205000D3844 /* PurchaseViewController.swift in Sources */,
 				55DFFCDF2946B253007E4A5A /* ProductDetailsViewController.swift in Sources */,
 				55B0CDED293432D700C7D96B /* TechVirtualMuseumApp.swift in Sources */,
 				55DFFCDD294654E6007E4A5A /* EventDetailsViewController.swift in Sources */,
