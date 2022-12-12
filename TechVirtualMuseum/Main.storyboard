@@ -651,6 +651,9 @@
             <objects>
                 <viewController id="k0a-sz-4VA" customClass="QRScannerViewController" customModule="TechVirtualMuseum" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="qrcode.viewfinder" catalog="system" id="vl2-w0-omW"/>
+                    <connections>
+                        <segue destination="4EN-37-usm" kind="presentation" identifier="showProductDetails" id="f5x-gg-gjc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S18-RH-70c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -778,6 +781,55 @@
             </objects>
             <point key="canvasLocation" x="4320.8000000000002" y="-1632.2660098522167"/>
         </scene>
+        <!--Product Details View Controller-->
+        <scene sceneID="MYT-PJ-PlW">
+            <objects>
+                <viewController id="4EN-37-usm" customClass="ProductDetailsViewController" customModule="TechVirtualMuseum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JzI-1R-bqd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Okf-LI-06X">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4P-2a-yuz">
+                                <rect key="frame" x="22" y="411" width="330" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
+                                <color key="textColor" name="TitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="m4U-pj-2lj">
+                                <rect key="frame" x="281" y="371" width="71" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGray6Color"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="headphones" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uSZ-pJ-OWB">
+                                <rect key="frame" x="299" y="381" width="35" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="EventTitleColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldc-Oe-XRB">
+                                <rect key="frame" x="22" y="476" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9qg-KJ-Th9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="yS3-hM-trk"/>
+                    <connections>
+                        <outlet property="eventImage" destination="Okf-LI-06X" id="6WO-l8-HmK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yxx-9D-B5n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4320.8000000000002" y="-2472.4137931034484"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="jLI-oH-QGB"/>
@@ -785,8 +837,10 @@
     <resources>
         <image name="LogoWithoutText" width="319" height="277"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="circle.fill" catalog="system" width="128" height="123"/>
         <image name="circlebadge.fill" catalog="system" width="128" height="122"/>
         <image name="clock" catalog="system" width="128" height="123"/>
+        <image name="headphones" catalog="system" width="128" height="121"/>
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="mappin" catalog="system" width="106" height="128"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
@@ -822,6 +876,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

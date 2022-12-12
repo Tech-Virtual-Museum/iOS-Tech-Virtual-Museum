@@ -9,6 +9,7 @@ import SwiftUI
 import CodeScanner
 
 struct QRScannerView: View {
+    var firestoreService = FirestoreService()
     
     @State var presentingScannerView = true
     @State var scannedQRCode = ""
@@ -18,6 +19,10 @@ struct QRScannerView: View {
         CodeScannerView(codeTypes: [.qr], shouldVibrateOnSuccess: true, completion: {result in if case let .success(code) = result {
             self.scannedQRCode = code.string
             print(self.scannedQRCode)
+            firestoreService.getDocumentWithDocumentId(collectionId: "products", documentId: self.scannedQRCode) {
+                (error, documentData) in
+                print(documentData)
+            }
             self.presentingScannerView = false
         }})
     }

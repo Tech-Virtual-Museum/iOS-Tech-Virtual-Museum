@@ -120,26 +120,6 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.layer.borderColor = UIColor.white.cgColor
     }
     
-    /*
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            // Get the selected item from the items array
-            let selectedItem = items[indexPath.row]
-        
-            print(selectedItem)
-        
-            if let presentedVC = self.presentedViewController as? EventDetailsViewController {
-                presentedVC.dismiss(animated: true, completion: {
-                    self.performSegue(withIdentifier: "showEventDetails", sender: selectedItem)
-                })
-            } else {
-                performSegue(withIdentifier: "showEventDetails", sender: selectedItem)
-            }
-            
-            // Perform the segue with the identifier you defined in the storyboard
-            //performSegue(withIdentifier: "showEventDetails", sender: selectedItem)
-        }
-     */
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showEventDetails" {
             let cell = sender as! UITableViewCell
