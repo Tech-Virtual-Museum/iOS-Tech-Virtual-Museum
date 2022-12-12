@@ -121,7 +121,7 @@
 		55A7E262291A78B2002F833D /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		55AD6916293E8EA400A8620D /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		55AD691A293E901000A8620D /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
-		55B0CDEC293432D700C7D96B /* TechVirtualMuseumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechVirtualMuseumApp.swift; sourceTree = "<group>"; };
+		55B0CDEC293432D700C7D96B /* TechVirtualMuseumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TechVirtualMuseumApp.swift; sourceTree = "<group>"; };
 		55B0CDEE293445F900C7D96B /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		55BE61252915BD8B007A7B34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		55C669622913C0CE0054734C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };

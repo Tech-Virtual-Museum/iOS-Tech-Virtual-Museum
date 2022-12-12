@@ -10,19 +10,24 @@ import CodeScanner
 
 struct QRScannerView: View {
     var firestoreService = FirestoreService()
-    
+
     @State var presentingScannerView = true
     @State var scannedQRCode = ""
     @State var isHiddenLoader: Bool = false
+    @State var isCodeScanned: Bool = false
+    
+    
     
     var scanner: some View {
         CodeScannerView(codeTypes: [.qr], shouldVibrateOnSuccess: true, completion: {result in if case let .success(code) = result {
             self.scannedQRCode = code.string
+            isCodeScanned = true
             print(self.scannedQRCode)
             firestoreService.getDocumentWithDocumentId(collectionId: "products", documentId: self.scannedQRCode) {
                 (error, documentData) in
-                print(documentData)
+                    //self.presentDestinationViewController(item: documentData)
             }
+            
             self.presentingScannerView = false
         }})
     }
@@ -37,25 +42,28 @@ struct QRScannerView: View {
                     .font(.custom("Roboto Black", size: 24))
                 LoaderView()
             }
+            
             self.scanner
         }
     }
 }
 
 
-struct LoaderView: View {
-    var tintColor: Color = .black
-    var scaleSize: CGFloat = 1.0
-    
-    var body: some View {
-        ProgressView()
-            .scaleEffect(scaleSize, anchor: .center)
-            .progressViewStyle(CircularProgressViewStyle(tint: tintColor))
-    }
+    struct LoaderView: View {
+        var tintColor: Color = .black
+        var scaleSize: CGFloat = 1.0
+        
+        var body: some View {
+            ProgressView()
+                .scaleEffect(scaleSize, anchor: .center)
+                .progressViewStyle(CircularProgressViewStyle(tint: tintColor))
+        }
 }
 
-struct QRScannerView_Previews: PreviewProvider {
-    static var previews: some View {
-        QRScannerView()
+    struct QRScannerView_Previews: PreviewProvider {
+        static var previews: some View {
+            QRScannerView()
     }
+    
+        
 }

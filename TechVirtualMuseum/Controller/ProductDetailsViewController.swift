@@ -8,6 +8,8 @@
 import UIKit
 
 class ProductDetailsViewController: UIViewController {
+    
+    var itemDetails: [String: Any]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
