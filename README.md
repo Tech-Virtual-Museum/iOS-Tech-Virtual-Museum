@@ -3,4 +3,10 @@
 App of a museum that allows users to scan a QR Code next to every item of the museum. When a QR is scanned, the app displays information about the corresponding object.
 Additionally, users can see a list of upcoming events at the museum, with their respective information, date and price and book tickets to visit the museum.
 
-##Contributors
+## Contributors
+<a href="https://github.com/Tech-Virtual-Museum/iOS-Tech-Virtual-Museum/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Tech-Virtual-Museum/iOS-Tech-Virtual-Museum" />
+</a>
+<a href="https://github.com/Tech-Virtual-Museum/Android-Tech-Virtual-Museum/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Tech-Virtual-Museum/Android-Tech-Virtual-Museum" />
+</a>
