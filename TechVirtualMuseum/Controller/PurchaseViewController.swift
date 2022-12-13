@@ -7,7 +7,8 @@
 
 import UIKit
 
-class PurchaseViewController: UIViewController {
+class PurchaseViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
     
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var hourCollectionView: UICollectionView!
@@ -27,17 +28,50 @@ class PurchaseViewController: UIViewController {
     
     @IBOutlet weak var juniorStepper: UIStepper!
     
+    let layout = UICollectionViewFlowLayout()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hourCollectionView.dataSource = self
+        hourCollectionView.delegate = self
+        
+        hourCollectionView.register(CustomHourCell.self, forCellWithReuseIdentifier: "MyCell")
+        
+        layout.itemSize = CGSize(width: 90, height: 50)
+        //layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = 10
+        layout.scrollDirection = .vertical
+        
+        hourCollectionView.setCollectionViewLayout(layout, animated: false)
+        hourCollectionView.showsVerticalScrollIndicator = false
+        hourCollectionView.showsHorizontalScrollIndicator = false
 
-        // Do any additional setup after loading the view.
+        //juniorStepper.
     }
     
-    @IBAction func stepperValueChanged(_ sender: UIStepper) {
-      print("Stepper value changed to: \(sender.value)")
-    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as! CustomHourCell
+            // Configure the cell with data from your data source
+            cell.hourLbl?.text = "a"
+            cell.layer.backgroundColor = UIColor.black.cgColor
+            cell.layer.cornerRadius = 10
+            return cell
+        }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            // Return the number of items in the collection view
+            return 12
+        }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOf section: Int) -> Int {
+            // Return the number of items in the collection view
+            return 12
+        }
+    
+    
+    
     
 
     /*

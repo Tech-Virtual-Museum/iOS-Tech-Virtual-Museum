@@ -26,6 +26,7 @@
 		554E2A6129398BC1009DCEC0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A6029398BC1009DCEC0 /* SignUpViewController.swift */; };
 		55946A5829382BA9000178BF /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 55946A5729382BA9000178BF /* CodeScanner */; };
 		55946A5C29382F60000178BF /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55946A5B29382F60000178BF /* QRScannerViewController.swift */; };
+		55A2DE752948F61000FC96F7 /* CustomHourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A2DE742948F61000FC96F7 /* CustomHourCell.swift */; };
 		55A7E263291A78E5002F833D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E256291A78B2002F833D /* Roboto-Medium.ttf */; };
 		55A7E264291A78E8002F833D /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E257291A78B2002F833D /* Roboto-Light.ttf */; };
 		55A7E265291A78EA002F833D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A7E258291A78B2002F833D /* Roboto-Regular.ttf */; };
@@ -108,6 +109,7 @@
 		5567EE84293194690061C988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5569AA9D7FC0138DEFCA134A /* Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig"; path = "Target Support Files/Pods-TechVirtualMuseum-TechVirtualMuseumUITests/Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		55946A5B29382F60000178BF /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		55A2DE742948F61000FC96F7 /* CustomHourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHourCell.swift; sourceTree = "<group>"; };
 		55A7E256291A78B2002F833D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		55A7E257291A78B2002F833D /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		55A7E258291A78B2002F833D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				55DB8A292936286C00A1C238 /* Event.swift */,
 				5502161129366FE700CFC800 /* EventsFirebase.swift */,
 				552802B72945080B00F9600C /* CustomNewCell.swift */,
+				55A2DE742948F61000FC96F7 /* CustomHourCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				55DFFCDD294654E6007E4A5A /* EventDetailsViewController.swift in Sources */,
 				5502161229366FE700CFC800 /* EventsFirebase.swift in Sources */,
 				552FF0242932E56800BD8FC8 /* FirebaseAuthService.swift in Sources */,
+				55A2DE752948F61000FC96F7 /* CustomHourCell.swift in Sources */,
 				55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */,
 				55AD6917293E8EA400A8620D /* CarouselViewController.swift in Sources */,
 				554E2A5929397F40009DCEC0 /* QRScannerView.swift in Sources */,
