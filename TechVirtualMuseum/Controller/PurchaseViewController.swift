@@ -12,21 +12,10 @@ class PurchaseViewController: UIViewController, UICollectionViewDataSource, UICo
     
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var hourCollectionView: UICollectionView!
-    @IBOutlet weak var juniorStepperLbl: UILabel!
-    @IBOutlet weak var studentStepperLbl: UILabel!
-    @IBOutlet weak var adultStepperLbl: UILabel!
-    @IBOutlet weak var seniorStepperLbl: UILabel!
-    @IBOutlet weak var juniorOrderLbl: UILabel!
-    @IBOutlet weak var studentOrderLbl: UILabel!
-    @IBOutlet weak var adultOrderLbl: UILabel!
-    @IBOutlet weak var seniorOrderLbl: UILabel!
-    @IBOutlet weak var studentStepper: UIStepper!
-    @IBOutlet weak var adultStepper: UIStepper!
-    @IBOutlet weak var seniorStepper: UIStepper!
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    @IBOutlet weak var juniorStepper: UIStepper!
+    
     
     let layout = UICollectionViewFlowLayout()
     
@@ -34,13 +23,24 @@ class PurchaseViewController: UIViewController, UICollectionViewDataSource, UICo
                            "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM", "7:00 PM",
                            "8:00 PM", "9:00 PM"]
     
+    let dateFormatter = DateFormatter()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        datePicker.minimumDate = Date()
+        let selectedDate = datePicker.date
+        datePicker.addTarget(self, action: #selector(datePickerChanged), for: .valueChanged)
+        
+        hourCollectionView.register(CustomHourCell.self, forCellWithReuseIdentifier: "CustomHourCell")
+        
+        
         hourCollectionView.dataSource = self
         hourCollectionView.delegate = self
         
-        hourCollectionView.register(CustomHourCell.self, forCellWithReuseIdentifier: "MyCell")
+        
         
         layout.itemSize = CGSize(width: 90, height: 50)
         //layout.minimumInteritemSpacing = 10
@@ -50,17 +50,34 @@ class PurchaseViewController: UIViewController, UICollectionViewDataSource, UICo
         hourCollectionView.setCollectionViewLayout(layout, animated: false)
         hourCollectionView.showsVerticalScrollIndicator = false
         hourCollectionView.showsHorizontalScrollIndicator = false
+    }
+    
+   
 
-        //juniorStepper.
+
+    @objc func datePickerChanged(_ sender: UIDatePicker) {
+        let selectedDate = sender.date
+        var dateString = ""
+        if Calendar.current.isDateInToday(selectedDate)  {
+            dateString = "TODAY"
+        } else {
+            dateString = dateFormatter.string(from: selectedDate)
+        }
+        
+        dateLbl.text = dateString
+
+        // Use the selected date as needed in your view controller
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCell", for: indexPath) as! CustomHourCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomHourCell", for: indexPath) as! CustomHourCell
             // Configure the cell with data from your data source
-            cell.hourLbl?.text = "a"
-            cell.layer.backgroundColor = UIColor.black.cgColor
+           
+            cell.layer.borderColor = UIColor(named: "ButtonBackground")?.cgColor
+            cell.layer.borderWidth = 2
             cell.layer.cornerRadius = 10
+            cell.hourLbl?.text = hours[indexPath.item]
             return cell
         }
     
