@@ -6,15 +6,28 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProductDetailsViewController: UIViewController {
     
     var itemDetails: [String: Any]?
-
+    
+    
+    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var itemDescription: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        itemImage.contentMode = .scaleAspectFill
+        if let url = URL(string: itemDetails?["img"] as! String) {
+            itemImage.sd_setImage(with: url)
+        }
+        itemName.text = itemDetails?["name"] as? String
+        itemDescription.text = itemDetails?["descripcion"] as? String
+        
     }
     
 

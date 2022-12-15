@@ -25,6 +25,8 @@
 		554E2A5929397F40009DCEC0 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A5829397F40009DCEC0 /* QRScannerView.swift */; };
 		554E2A6129398BC1009DCEC0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A6029398BC1009DCEC0 /* SignUpViewController.swift */; };
 		5570A567294B463E00FE0E9E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5570A566294B463E00FE0E9E /* SDWebImage */; };
+		5570A569294B987100FE0E9E /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5570A568294B987100FE0E9E /* VideoViewController.swift */; };
+		5570A56C294BA68A00FE0E9E /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 5570A56B294BA68A00FE0E9E /* YouTubeiOSPlayerHelper */; };
 		55946A5829382BA9000178BF /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 55946A5729382BA9000178BF /* CodeScanner */; };
 		55946A5C29382F60000178BF /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55946A5B29382F60000178BF /* QRScannerViewController.swift */; };
 		55A2DE7729491E0700FC96F7 /* SecondSlidePurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A2DE7629491E0700FC96F7 /* SecondSlidePurchaseViewController.swift */; };
@@ -111,6 +113,7 @@
 		554E2A6029398BC1009DCEC0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5567EE84293194690061C988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5569AA9D7FC0138DEFCA134A /* Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig"; path = "Target Support Files/Pods-TechVirtualMuseum-TechVirtualMuseumUITests/Pods-TechVirtualMuseum-TechVirtualMuseumUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5570A568294B987100FE0E9E /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		55946A5B29382F60000178BF /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
 		55A2DE7629491E0700FC96F7 /* SecondSlidePurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSlidePurchaseViewController.swift; sourceTree = "<group>"; };
 		55A2DE782949262D00FC96F7 /* ThirdSlidePurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdSlidePurchaseViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +161,7 @@
 				5570A567294B463E00FE0E9E /* SDWebImage in Frameworks */,
 				55BE612D2915C309007A7B34 /* FirebaseAuth in Frameworks */,
 				55946A5829382BA9000178BF /* CodeScanner in Frameworks */,
+				5570A56C294BA68A00FE0E9E /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +219,7 @@
 				55A2DE7629491E0700FC96F7 /* SecondSlidePurchaseViewController.swift */,
 				55A2DE782949262D00FC96F7 /* ThirdSlidePurchaseViewController.swift */,
 				55A2DE7A294927F100FC96F7 /* PurchaseCompletedViewController.swift */,
+				5570A568294B987100FE0E9E /* VideoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 				55946A5729382BA9000178BF /* CodeScanner */,
 				55AD691C293E963200A8620D /* ACarousel */,
 				5570A566294B463E00FE0E9E /* SDWebImage */,
+				5570A56B294BA68A00FE0E9E /* YouTubeiOSPlayerHelper */,
 			);
 			productName = TechVirtualMuseum;
 			productReference = 553BCA57291337F4008A2847 /* TechVirtualMuseum.app */;
@@ -456,6 +462,7 @@
 				55946A5629382BA9000178BF /* XCRemoteSwiftPackageReference "CodeScanner" */,
 				55AD6913293E31F700A8620D /* XCRemoteSwiftPackageReference "ACarousel" */,
 				5570A565294B463E00FE0E9E /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				5570A56A294BA68A00FE0E9E /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 			);
 			productRefGroup = 553BCA58291337F4008A2847 /* Products */;
 			projectDirPath = "";
@@ -622,6 +629,7 @@
 			files = (
 				55456DB12934B48F00AF1AFF /* AccountDataViewController.swift in Sources */,
 				553875C32943B6200097B066 /* TabBarController.swift in Sources */,
+				5570A569294B987100FE0E9E /* VideoViewController.swift in Sources */,
 				55DB8A2D29362AD000A1C238 /* EventViewController.swift in Sources */,
 				55DB8A2A2936286C00A1C238 /* Event.swift in Sources */,
 				552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */,
@@ -807,6 +815,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TechVirtualMuseum/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "We need access to your library";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to scan QR codes!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
@@ -842,6 +851,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TechVirtualMuseum/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "We need access to your library";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to scan QR codes!";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
@@ -993,6 +1003,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		5570A56A294BA68A00FE0E9E /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		55946A5629382BA9000178BF /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
@@ -1024,6 +1042,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5570A565294B463E00FE0E9E /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		5570A56B294BA68A00FE0E9E /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5570A56A294BA68A00FE0E9E /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
 		};
 		55946A5729382BA9000178BF /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
