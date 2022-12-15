@@ -25,6 +25,8 @@ class PurchaseViewController: UIViewController, UICollectionViewDataSource, UICo
     
     let dateFormatter = DateFormatter()
     
+    var lastSelectedCell: UICollectionViewCell? = nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +68,7 @@ class PurchaseViewController: UIViewController, UICollectionViewDataSource, UICo
         
         dateLbl.text = dateString
 
-        // Use the selected date as needed in your view controller
+        
     }
     
     
@@ -84,6 +86,14 @@ class PurchaseViewController: UIViewController, UICollectionViewDataSource, UICo
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
             // Return the number of items in the collection view
         return hours.count
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        lastSelectedCell?.backgroundColor = UIColor(named: "white")
+        let cell = collectionView.cellForItem(at: indexPath)
+        lastSelectedCell = cell
+        cell?.backgroundColor = UIColor(named: "ButtonBackgroundLight")
     }
     
     
