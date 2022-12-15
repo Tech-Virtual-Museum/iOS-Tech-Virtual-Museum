@@ -102,7 +102,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
            */
           if let url = URL(string: item["imgUrl"] as! String) {
                   cell.eventImage.sd_setImage(with: url)
-              }
+        }
           
         return cell
       }

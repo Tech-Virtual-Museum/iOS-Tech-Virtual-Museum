@@ -7,6 +7,13 @@
 
 import UIKit
 
+class CustomHourCell: UICollectionViewCell {
+    
+    @IBOutlet weak var hourLbl: UILabel!
+    
+}
+
+
 class PurchaseViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     
@@ -36,11 +43,12 @@ class PurchaseViewController: UIViewController, UICollectionViewDataSource, UICo
         let selectedDate = datePicker.date
         datePicker.addTarget(self, action: #selector(datePickerChanged), for: .valueChanged)
         
-        hourCollectionView.register(CustomHourCell.self, forCellWithReuseIdentifier: "CustomHourCell")
         
         
         hourCollectionView.dataSource = self
         hourCollectionView.delegate = self
+        
+        //hourCollectionView.register(CustomHourCell.self, forCellWithReuseIdentifier: "CustomHourCell")
         
         
         
@@ -74,12 +82,14 @@ class PurchaseViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomHourCell", for: indexPath) as! CustomHourCell
-            // Configure the cell with data from your data source
+
            
             cell.layer.borderColor = UIColor(named: "ButtonBackground")?.cgColor
             cell.layer.borderWidth = 2
             cell.layer.cornerRadius = 10
-            //cell.hourLbl?.text = hours[indexPath.item]
+            //print(cell.hourLbl)
+        
+            cell.hourLbl?.text = hours[indexPath.item]
             return cell
         }
     
@@ -95,6 +105,7 @@ class PurchaseViewController: UIViewController, UICollectionViewDataSource, UICo
         lastSelectedCell = cell
         cell?.backgroundColor = UIColor(named: "ButtonBackgroundLight")
     }
+    
     
     
     
