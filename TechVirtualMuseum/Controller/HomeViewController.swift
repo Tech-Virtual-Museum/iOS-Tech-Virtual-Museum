@@ -7,7 +7,7 @@
 
 import UIKit
 import MapKit
-import HSCycleGalleryView
+//import HSCycleGalleryView
 
 class HomeViewController: UIViewController{
     

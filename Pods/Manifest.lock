@@ -1,0 +1,16 @@
+PODS:
+  - HSCycleGalleryView (1.2.0)
+
+DEPENDENCIES:
+  - HSCycleGalleryView
+
+SPEC REPOS:
+  trunk:
+    - HSCycleGalleryView
+
+SPEC CHECKSUMS:
+  HSCycleGalleryView: 5101435175a26d08f1c062cf6cb245f58f09b425
+
+PODFILE CHECKSUM: e02de880698a10fe2fe160d1144d2cb987be1862
+
+COCOAPODS: 1.11.3

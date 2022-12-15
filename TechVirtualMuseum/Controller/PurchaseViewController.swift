@@ -77,7 +77,7 @@ class PurchaseViewController: UIViewController, UICollectionViewDataSource, UICo
             cell.layer.borderColor = UIColor(named: "ButtonBackground")?.cgColor
             cell.layer.borderWidth = 2
             cell.layer.cornerRadius = 10
-            cell.hourLbl?.text = hours[indexPath.item]
+            //cell.hourLbl?.text = hours[indexPath.item]
             return cell
         }
     
