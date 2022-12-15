@@ -24,6 +24,7 @@
 		55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DB32935239800AF1AFF /* CarouselImage.swift */; };
 		554E2A5929397F40009DCEC0 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A5829397F40009DCEC0 /* QRScannerView.swift */; };
 		554E2A6129398BC1009DCEC0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A6029398BC1009DCEC0 /* SignUpViewController.swift */; };
+		5570A567294B463E00FE0E9E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5570A566294B463E00FE0E9E /* SDWebImage */; };
 		55946A5829382BA9000178BF /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 55946A5729382BA9000178BF /* CodeScanner */; };
 		55946A5C29382F60000178BF /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55946A5B29382F60000178BF /* QRScannerViewController.swift */; };
 		55A2DE752948F61000FC96F7 /* CustomHourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A2DE742948F61000FC96F7 /* CustomHourCell.swift */; };
@@ -156,6 +157,7 @@
 				55AD6910293E2B2500A8620D /* Pods_TechVirtualMuseum.framework in Frameworks */,
 				55BE612B2915C309007A7B34 /* FirebaseAnalytics in Frameworks */,
 				55BE61332915C309007A7B34 /* FirebaseStorage in Frameworks */,
+				5570A567294B463E00FE0E9E /* SDWebImage in Frameworks */,
 				55BE612D2915C309007A7B34 /* FirebaseAuth in Frameworks */,
 				55946A5829382BA9000178BF /* CodeScanner in Frameworks */,
 			);
@@ -375,6 +377,7 @@
 				55BE61322915C309007A7B34 /* FirebaseStorage */,
 				55946A5729382BA9000178BF /* CodeScanner */,
 				55AD691C293E963200A8620D /* ACarousel */,
+				5570A566294B463E00FE0E9E /* SDWebImage */,
 			);
 			productName = TechVirtualMuseum;
 			productReference = 553BCA57291337F4008A2847 /* TechVirtualMuseum.app */;
@@ -455,6 +458,7 @@
 				55BE61292915C309007A7B34 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				55946A5629382BA9000178BF /* XCRemoteSwiftPackageReference "CodeScanner" */,
 				55AD6913293E31F700A8620D /* XCRemoteSwiftPackageReference "ACarousel" */,
+				5570A565294B463E00FE0E9E /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 553BCA58291337F4008A2847 /* Products */;
 			projectDirPath = "";
@@ -985,6 +989,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5570A565294B463E00FE0E9E /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		55946A5629382BA9000178BF /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/twostraws/CodeScanner";
@@ -1012,6 +1024,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5570A566294B463E00FE0E9E /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5570A565294B463E00FE0E9E /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		55946A5729382BA9000178BF /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 55946A5629382BA9000178BF /* XCRemoteSwiftPackageReference "CodeScanner" */;

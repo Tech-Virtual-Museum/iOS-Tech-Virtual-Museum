@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseFirestore
+import SDWebImage
 
 
 class EventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchResultsUpdating {
@@ -74,10 +75,12 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
           //let imageUrl = items[indexPath.row]["imgUrl"] as? URL
           //print(items[indexPath.row]["name"] as? String)
           
-          let item = items[indexPath.row]
+          let item = filteredItems[indexPath.row]
           cell.eventTitle?.text = item["name"] as? String
           cell.eventDate?.text = item["date"] as? String
           cell.eventHour?.text = item["hour"] as? String
+          
+          /*
           if let url = URL(string: item["imgUrl"] as! String) {
               let session = URLSession(configuration: .default)
               let task = session.dataTask(with: url) { (data, response, error) in
@@ -93,8 +96,13 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
                       print("Failed to load the data: \(error!)")
                   }
               }
+           
               task.resume()
           }
+           */
+          if let url = URL(string: item["imgUrl"] as! String) {
+                  cell.eventImage.sd_setImage(with: url)
+              }
           
         return cell
       }
@@ -135,9 +143,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filteredItems = searchText.isEmpty ? items : items.filter { (item: [String: Any]) -> Bool in
-                // Extract the "name" property from the item dictionary
                 let itemName = item["name"] as! String
-                // If itemName matches the searchText, return true to include it
             return itemName.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
             }
         tableView.reloadData()
