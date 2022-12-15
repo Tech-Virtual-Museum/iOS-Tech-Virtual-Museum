@@ -42,7 +42,10 @@ struct QRScannerView: View {
                     .font(.custom("Roboto Black", size: 24))
                 LoaderView()
             }
-            
+            Button("Go to the scanned item"){
+               
+            }.opacity(isCodeScanned ? 1 : 0)
+
             self.scanner
         }
     }

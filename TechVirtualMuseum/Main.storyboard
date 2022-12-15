@@ -656,7 +656,7 @@
                         <outlet property="tabBar" destination="go7-7e-SW8" id="tPR-kv-IPn"/>
                         <segue destination="szi-IY-BTF" kind="relationship" relationship="viewControllers" id="bFp-gw-rsk"/>
                         <segue destination="RDk-Mt-vX6" kind="relationship" relationship="viewControllers" id="vFg-0b-jXo"/>
-                        <segue destination="k0a-sz-4VA" kind="relationship" relationship="viewControllers" id="2u3-oD-Biv"/>
+                        <segue destination="U4b-iS-nd1" kind="relationship" relationship="viewControllers" id="2u3-oD-Biv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VO3-9v-lnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -667,14 +667,14 @@
         <scene sceneID="3BR-Nw-cvw">
             <objects>
                 <viewController id="k0a-sz-4VA" customClass="QRScannerViewController" customModule="TechVirtualMuseum" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="qrcode.viewfinder" catalog="system" id="vl2-w0-omW"/>
+                    <navigationItem key="navigationItem" id="Hxp-aH-tkj"/>
                     <connections>
-                        <segue destination="4EN-37-usm" kind="presentation" identifier="showProductDetails" id="f5x-gg-gjc"/>
+                        <segue destination="4EN-37-usm" kind="show" identifier="showProductDetails" id="f5x-gg-gjc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S18-RH-70c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3465" y="-2472"/>
+            <point key="canvasLocation" x="4407.1999999999998" y="-2472.4137931034484"/>
         </scene>
         <!--Carousel View Controller-->
         <scene sceneID="IT7-hW-ldo">
@@ -910,7 +910,7 @@
             <objects>
                 <viewController id="4EN-37-usm" customClass="ProductDetailsViewController" customModule="TechVirtualMuseum" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JzI-1R-bqd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Okf-LI-06X">
@@ -946,13 +946,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="yS3-hM-trk"/>
-                    <connections>
-                        <outlet property="eventImage" destination="Okf-LI-06X" id="6WO-l8-HmK"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="BEn-4e-Gbn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxx-9D-B5n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4320.8000000000002" y="-2472.4137931034484"/>
+            <point key="canvasLocation" x="5263.1999999999998" y="-2472.4137931034484"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yqu-lJ-Uld">
@@ -1504,6 +1502,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7rT-cZ-WqV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6052" y="44"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HG5-Kc-MXa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U4b-iS-nd1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="qrcode.viewfinder" catalog="system" id="vl2-w0-omW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZDe-g4-3aG">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="k0a-sz-4VA" kind="relationship" relationship="rootViewController" id="NXx-D7-sEy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Olw-i3-teD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3464.8000000000002" y="-2472.4137931034484"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
