@@ -17,6 +17,8 @@ class ProductDetailsViewController: UIViewController {
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemDescription: UILabel!
     
+    var selectedItem: String = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,20 @@ class ProductDetailsViewController: UIViewController {
         itemDescription.text = itemDetails?["descripcion"] as? String
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showProductVideo" {
+            let destinationVC = segue.destination as! VideoViewController
+            destinationVC.videoId = self.itemDetails?["videoId"] as! String
+        }
+        
+        if segue.identifier == "showProductComments" {
+            let destinationVC = segue.destination as! CommentsViewController
+            destinationVC.selectedItem = self.selectedItem
+        }
+    }
+
     
 
     /*

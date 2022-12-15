@@ -11,10 +11,12 @@ import YouTubeiOSPlayerHelper
 
 class VideoViewController: UIViewController, YTPlayerViewDelegate {
     @IBOutlet var videoPlayer: YTPlayerView!
+    
+    var videoId: String = ""
 
     override func viewDidLoad() {
         self.videoPlayer.delegate = self;
-        self.videoPlayer.load(withVideoId: "8PQQZ_nwk6s")
+        self.videoPlayer.load(withVideoId: videoId)
         self.videoPlayer.playVideo()
 
     }

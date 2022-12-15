@@ -21,6 +21,7 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
     var firestoreService = FirestoreService()
     
     var itemDetails: [String: Any] = [:]
+    var selectedItem: String = ""
 
     var captureSession: AVCaptureSession!
         var previewLayer: AVCaptureVideoPreviewLayer!
@@ -106,6 +107,7 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
 
         func found(code: String) {
             print(code)
+            selectedItem = code
             //dismiss(animated: true)
             self.firestoreService.getDocumentWithDocumentId(collectionId: "products", documentId: code) {
                 (error, documentData) in
@@ -118,11 +120,10 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
     
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "showProductDetails" {
-                // get a reference to the destination view controller
-                let destinationVC = segue.destination as! ProductDetailsViewController
 
-                // set the itemDetails property of the destination view controller to the itemDetails property of the current view controller
+                let destinationVC = segue.destination as! ProductDetailsViewController
                 destinationVC.itemDetails = self.itemDetails
+                destinationVC.selectedItem = self.selectedItem
             }
         }
 
