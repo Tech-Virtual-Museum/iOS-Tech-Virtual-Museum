@@ -49,6 +49,7 @@
 		55AD6917293E8EA400A8620D /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD6916293E8EA400A8620D /* CarouselViewController.swift */; };
 		55AD691B293E901000A8620D /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD691A293E901000A8620D /* CarouselView.swift */; };
 		55AD691D293E963200A8620D /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 55AD691C293E963200A8620D /* ACarousel */; };
+		55B06FEB2950C8D300D9EC25 /* PurchaseEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B06FEA2950C8D300D9EC25 /* PurchaseEventViewController.swift */; };
 		55B0CDED293432D700C7D96B /* TechVirtualMuseumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0CDEC293432D700C7D96B /* TechVirtualMuseumApp.swift */; };
 		55B0CDEF293445F900C7D96B /* FirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B0CDEE293445F900C7D96B /* FirestoreService.swift */; };
 		55BE61262915BD8B007A7B34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 55BE61252915BD8B007A7B34 /* GoogleService-Info.plist */; };
@@ -134,6 +135,7 @@
 		55A7E262291A78B2002F833D /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		55AD6916293E8EA400A8620D /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		55AD691A293E901000A8620D /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		55B06FEA2950C8D300D9EC25 /* PurchaseEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseEventViewController.swift; sourceTree = "<group>"; };
 		55B0CDEC293432D700C7D96B /* TechVirtualMuseumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TechVirtualMuseumApp.swift; sourceTree = "<group>"; };
 		55B0CDEE293445F900C7D96B /* FirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreService.swift; sourceTree = "<group>"; };
 		55BE61252915BD8B007A7B34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				55A2DE7A294927F100FC96F7 /* PurchaseCompletedViewController.swift */,
 				5570A568294B987100FE0E9E /* VideoViewController.swift */,
 				5570A56D294BBD7B00FE0E9E /* CommentsViewController.swift */,
+				55B06FEA2950C8D300D9EC25 /* PurchaseEventViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -634,6 +637,7 @@
 				553875C32943B6200097B066 /* TabBarController.swift in Sources */,
 				5570A569294B987100FE0E9E /* VideoViewController.swift in Sources */,
 				55DB8A2D29362AD000A1C238 /* EventViewController.swift in Sources */,
+				55B06FEB2950C8D300D9EC25 /* PurchaseEventViewController.swift in Sources */,
 				55DB8A2A2936286C00A1C238 /* Event.swift in Sources */,
 				552FF02A2932F89A00BD8FC8 /* LoginViewController.swift in Sources */,
 				55A2DE7729491E0700FC96F7 /* SecondSlidePurchaseViewController.swift in Sources */,
