@@ -517,7 +517,7 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search events..." translatesAutoresizingMaskIntoConstraints="NO" id="gU7-ib-gEC">
-                                <rect key="frame" x="-1" y="95" width="355" height="44"/>
+                                <rect key="frame" x="-1" y="95" width="354" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -770,7 +770,7 @@
                                 </cells>
                             </collectionView>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="2fY-Hx-x96">
-                                <rect key="frame" x="19" y="176" width="336" height="305"/>
+                                <rect key="frame" x="18" y="176" width="336" height="305"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="ButtonBackground"/>
                             </datePicker>
@@ -948,13 +948,6 @@
                                 <color key="textColor" name="EventTitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldc-Oe-XRB">
-                                <rect key="frame" x="16" y="501" width="343" height="223"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDp-ty-0Fs">
                                 <rect key="frame" x="64" y="408" width="50" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -964,6 +957,13 @@
                                     <segue destination="mGQ-kY-mcQ" kind="presentation" identifier="showProductComments" id="sCg-2W-kTG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldc-Oe-XRB">
+                                <rect key="frame" x="16" y="506" width="343" height="223"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9qg-KJ-Th9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1117,6 +1117,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="processLogin:" destination="PVb-Z8-Xh7" eventType="touchUpInside" id="nHc-HM-Uqn"/>
+                                    <action selector="tapBuyButton:" destination="Des-kU-nvS" eventType="touchUpInside" id="MCk-9J-afJ"/>
                                     <segue destination="Xsy-d1-1er" kind="push" animates="NO" id="EGu-d9-Mm9"/>
                                 </connections>
                             </button>
@@ -1159,8 +1160,8 @@
                                 <color key="textColor" name="SubtitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="€ 0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSZ-Te-rqm">
-                                <rect key="frame" x="232" y="623" width="115" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="€ 0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSZ-Te-rqm">
+                                <rect key="frame" x="156" y="623" width="181" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="32"/>
                                 <nil key="highlightedColor"/>
@@ -1413,7 +1414,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8C6-1T-Hrg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4407" y="44"/>
+            <point key="canvasLocation" x="4405.6000000000004" y="43.596059113300491"/>
         </scene>
         <!--Third Slide Purchase View Controller-->
         <scene sceneID="htB-Gs-yfK">

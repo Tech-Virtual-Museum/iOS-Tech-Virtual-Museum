@@ -27,7 +27,16 @@ class SecondSlidePurchaseViewController: UIViewController {
     
     @IBOutlet weak var totalLbl: UILabel!
     
+    @IBAction func tapBuyButton(_ sender: UIButton) {
+    }
+    
+    
     var total: Double = 0
+    var dialogMessage = UIAlertController(title: "No tickets selected", message: "You haven't selected any tickets yet. Add a ticket to continue.", preferredStyle: .alert)
+    let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+         print("Ok button tapped")
+      })
+    
     
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
@@ -66,7 +75,7 @@ class SecondSlidePurchaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.dialogMessage.addAction(ok)
         juniorStepper.addTarget(self, action: #selector(stepperValueChanged), for: .valueChanged)
         studentStepper.addTarget(self, action: #selector(stepperValueChanged), for: .valueChanged)
         adultStepper.addTarget(self, action: #selector(stepperValueChanged), for: .valueChanged)

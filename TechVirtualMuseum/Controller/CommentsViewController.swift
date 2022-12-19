@@ -11,15 +11,15 @@ class CommentsViewController: UIViewController {
     
     var selectedItem: String = ""
     let firestoreService = FirestoreService()
+    var comments: Any? = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.firestoreService.getDocumentWithDocumentId(collectionId: "comments", documentId: selectedItem ){
             (error, collectionData) in
-            for document in collectionData {
-                print(document)
-            }
+            self.comments = collectionData["comments"]
+            print(self.comments)
         }
 
         // Do any additional setup after loading the view.

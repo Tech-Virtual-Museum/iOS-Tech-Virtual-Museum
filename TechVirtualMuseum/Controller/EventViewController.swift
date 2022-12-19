@@ -64,6 +64,7 @@ class EventViewController: UIViewController, UITableViewDataSource, UITableViewD
 
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.keyboardDismissMode = .onDrag
 
         tableView.register(CustomNewCell.self, forCellReuseIdentifier: "Cell")
         
