@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PVb-Z8-Xh7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ckR-7B-ylq">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -136,10 +136,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9JR-WH-zcZ">
+                                <rect key="frame" x="35" y="391" width="166" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="11"/>
+                                <color key="textColor" name="TitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTV-Qq-2fP">
+                                <rect key="frame" x="26" y="386" width="184" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <segue destination="84D-Jl-UNK" kind="push" identifier="resetPassword" id="clN-pe-as2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tz2-lV-5qv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dRS-Ee-klW"/>
                     <connections>
                         <outlet property="txtEmail" destination="JVK-Iz-DQF" id="ceh-bt-2sv"/>
                         <outlet property="txtPassword" destination="Zfp-2G-QWV" id="zKU-AP-wr9"/>
@@ -147,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBE-D3-OWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220" y="53.940886699507388"/>
+            <point key="canvasLocation" x="1162.4000000000001" y="53.940886699507388"/>
         </scene>
         <!--home-->
         <scene sceneID="1c0-91-tNb">
@@ -306,7 +323,7 @@
             <objects>
                 <viewController id="JUH-Pt-nMk" customClass="SignUpViewController" customModule="TechVirtualMuseum" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mh2-mP-EHY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmJ-DU-VZp">
@@ -441,7 +458,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvG-Xz-YVh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1197.5999999999999" y="54.679802955665025"/>
+            <point key="canvasLocation" x="2140" y="54.679802955665025"/>
         </scene>
         <!--Event View Controller-->
         <scene sceneID="9yJ-Fh-vs9">
@@ -518,7 +535,7 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search events..." translatesAutoresizingMaskIntoConstraints="NO" id="gU7-ib-gEC">
-                                <rect key="frame" x="-2" y="95" width="354" height="44"/>
+                                <rect key="frame" x="-5" y="95" width="357" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -618,7 +635,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="tapLogOutButton:" destination="RvH-M9-R8b" eventType="touchUpInside" id="pVy-Is-FFr"/>
-                                    <segue destination="PVb-Z8-Xh7" kind="presentation" modalPresentationStyle="fullScreen" id="Gfe-Nt-DlD"/>
+                                    <segue destination="ckR-7B-ylq" kind="presentation" modalPresentationStyle="fullScreen" id="Gfe-Nt-DlD"/>
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ESX-ly-OyM">
@@ -796,7 +813,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7b-i1-Q5C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2563" y="-145"/>
+            <point key="canvasLocation" x="3504.8000000000002" y="-145.19704433497537"/>
         </scene>
         <!--Purchase View Controller-->
         <scene sceneID="oYJ-ui-A6s">
@@ -877,7 +894,7 @@
                                 </cells>
                             </collectionView>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="2fY-Hx-x96">
-                                <rect key="frame" x="17" y="176" width="336" height="305"/>
+                                <rect key="frame" x="16" y="176" width="334" height="305"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="ButtonBackground"/>
                             </datePicker>
@@ -903,7 +920,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hqr-mO-qLs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3538.4000000000001" y="44.334975369458128"/>
+            <point key="canvasLocation" x="4480.8000000000002" y="44.334975369458128"/>
         </scene>
         <!--Event Details View Controller-->
         <scene sceneID="Qn3-dT-mU9">
@@ -1518,7 +1535,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8C6-1T-Hrg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4405.6000000000004" y="43.596059113300491"/>
+            <point key="canvasLocation" x="5348" y="43.596059113300491"/>
         </scene>
         <!--Third Slide Purchase View Controller-->
         <scene sceneID="htB-Gs-yfK">
@@ -1686,7 +1703,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1zx-OQ-9YR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5228" y="43.596059113300491"/>
+            <point key="canvasLocation" x="6170.3999999999996" y="43.596059113300491"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="i6T-Pr-znU">
@@ -1737,7 +1754,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7rT-cZ-WqV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6052" y="44"/>
+            <point key="canvasLocation" x="6994.3999999999996" y="43.596059113300491"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HG5-Kc-MXa">
@@ -2036,6 +2053,102 @@
             </objects>
             <point key="canvasLocation" x="6214" y="-1632"/>
         </scene>
+        <!--Reset Password View Controller-->
+        <scene sceneID="nul-BT-9Ck">
+            <objects>
+                <viewController id="84D-Jl-UNK" customClass="ResetPasswordViewController" customModule="TechVirtualMuseum" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ka3-gK-UKg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2L-Ld-zqx">
+                                <rect key="frame" x="72" y="668" width="230" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reset password" cornerStyle="large">
+                                    <fontDescription key="titleFontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                    <color key="baseBackgroundColor" name="ButtonBackground"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sendReset:" destination="84D-Jl-UNK" eventType="touchUpInside" id="Znf-CJ-mSc"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="LogoWithoutText" translatesAutoresizingMaskIntoConstraints="NO" id="hyD-H4-bkJ">
+                                <rect key="frame" x="68" y="47" width="37" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tech Virtual Museum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3r-XJ-hCH">
+                                <rect key="frame" x="113" y="58" width="194" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="18"/>
+                                <color key="textColor" name="LaunchColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYo-1O-Gll">
+                                <rect key="frame" x="91" y="274" width="193" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
+                                <color key="textColor" name="TitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your email and we will send an email for recovery." textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCD-7t-6WV">
+                                <rect key="frame" x="29" y="311" width="316" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <color key="textColor" name="SubtitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="key.horizontal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lxk-Tm-PUH">
+                                <rect key="frame" x="63" y="134.66666666666652" width="249" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="EventTitleColor"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ER6-ak-ICj">
+                                <rect key="frame" x="34" y="413" width="306" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="TextAreaBackground"/>
+                                <color key="textColor" name="PlaceholderColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQB-AD-Znc">
+                                <rect key="frame" x="34" y="390" width="103" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
+                                <color key="textColor" name="TitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Pv-X4-bw3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" style="editor" id="gb6-Mg-9Y4"/>
+                    <connections>
+                        <outlet property="emailTxtFld" destination="ER6-ak-ICj" id="0eI-J9-lyS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdu-I9-m8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="843.8423645320197"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="98o-Cd-RdP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ckR-7B-ylq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Fb-YZ-hpn">
+                        <rect key="frame" x="0.0" y="47" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PVb-Z8-Xh7" kind="relationship" relationship="rootViewController" id="qEW-W8-B19"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jT9-w1-C2X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="53.940886699507388"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="SSQ-g4-cvM"/>
@@ -2056,6 +2169,7 @@
         <image name="circlebadge.fill" catalog="system" width="128" height="122"/>
         <image name="clock" catalog="system" width="128" height="123"/>
         <image name="house" catalog="system" width="128" height="104"/>
+        <image name="key.horizontal" catalog="system" width="128" height="68"/>
         <image name="mappin" catalog="system" width="106" height="128"/>
         <image name="message" catalog="system" width="128" height="116"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>

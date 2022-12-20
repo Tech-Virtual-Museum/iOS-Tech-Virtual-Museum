@@ -66,6 +66,7 @@
 		55DD6A1229477205000D3844 /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DD6A1129477205000D3844 /* PurchaseViewController.swift */; };
 		55DFFCDD294654E6007E4A5A /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFFCDC294654E6007E4A5A /* EventDetailsViewController.swift */; };
 		55DFFCDF2946B253007E4A5A /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DFFCDE2946B253007E4A5A /* ProductDetailsViewController.swift */; };
+		55E8B34B29523B410017E1E4 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E8B34A29523B410017E1E4 /* ResetPasswordViewController.swift */; };
 		55EA44832919C4070095D8E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55EA44822919C4070095D8E5 /* Main.storyboard */; };
 		9FD33421924837899EBC90D3 /* Pods_TechVirtualMuseum_TechVirtualMuseumUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD3CC9A7D18BD4F206741A4 /* Pods_TechVirtualMuseum_TechVirtualMuseumUITests.framework */; };
 /* End PBXBuildFile section */
@@ -145,6 +146,7 @@
 		55DD6A1129477205000D3844 /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 		55DFFCDC294654E6007E4A5A /* EventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		55DFFCDE2946B253007E4A5A /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		55E8B34A29523B410017E1E4 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		55EA44822919C4070095D8E5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		92E24D224894A806FE7B3861 /* Pods-TechVirtualMuseumTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechVirtualMuseumTests.debug.xcconfig"; path = "Target Support Files/Pods-TechVirtualMuseumTests/Pods-TechVirtualMuseumTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3E7623CBF82780B831E614C /* Pods_TechVirtualMuseumTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechVirtualMuseumTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,6 +228,7 @@
 				5570A568294B987100FE0E9E /* VideoViewController.swift */,
 				5570A56D294BBD7B00FE0E9E /* CommentsViewController.swift */,
 				55B06FEA2950C8D300D9EC25 /* PurchaseEventViewController.swift */,
+				55E8B34A29523B410017E1E4 /* ResetPasswordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 				55AD6917293E8EA400A8620D /* CarouselViewController.swift in Sources */,
 				55A2DE7B294927F100FC96F7 /* PurchaseCompletedViewController.swift in Sources */,
 				554E2A5929397F40009DCEC0 /* QRScannerView.swift in Sources */,
+				55E8B34B29523B410017E1E4 /* ResetPasswordViewController.swift in Sources */,
 				55AD691B293E901000A8620D /* CarouselView.swift in Sources */,
 				55946A5C29382F60000178BF /* QRScannerViewController.swift in Sources */,
 				55456DAF2934A91100AF1AFF /* HomeViewController.swift in Sources */,

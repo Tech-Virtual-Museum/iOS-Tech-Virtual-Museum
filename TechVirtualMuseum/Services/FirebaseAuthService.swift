@@ -56,4 +56,17 @@ class FirebaseAuthService {
             completion(false)
         }
     }
+    
+    func sendPasswordReset(email: String, completion: @escaping (_ error: Bool, _ errorDescription: String) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            if ((error) != nil) {
+                print("hay error")
+                completion(true, error?.localizedDescription ?? "")
+            }
+            else {
+                completion(false, "")
+            }
+        }
+    }
+    
 }
