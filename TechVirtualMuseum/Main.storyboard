@@ -649,7 +649,7 @@
                             <imageReference key="image" image="square.and.pencil" catalog="system" symbolScale="large" variableValue="0.0"/>
                             <color key="tintColor" name="EventTitleColor"/>
                             <connections>
-                                <segue destination="z7D-NL-MSb" kind="show" id="KeZ-0h-agg"/>
+                                <segue destination="z7D-NL-MSb" kind="show" identifier="editData" id="KeZ-0h-agg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -664,10 +664,10 @@
             </objects>
             <point key="canvasLocation" x="4407.1999999999998" y="-696.05911330049264"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Account Data View Controller-->
         <scene sceneID="CSp-iJ-SjQ">
             <objects>
-                <viewController id="z7D-NL-MSb" sceneMemberID="viewController">
+                <viewController id="z7D-NL-MSb" customClass="EditAccountDataViewController" customModule="TechVirtualMuseum" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DGq-PX-oWr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -679,7 +679,7 @@
                                 <color key="textColor" name="TitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gaF-jn-s4a">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gaF-jn-s4a">
                                 <rect key="frame" x="31" y="337" width="312" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="TextAreaBackground"/>
@@ -694,7 +694,7 @@
                                 <color key="textColor" name="TitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="POM-iw-LBF">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="POM-iw-LBF">
                                 <rect key="frame" x="31" y="169" width="312" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="TextAreaBackground"/>
@@ -709,7 +709,7 @@
                                 <color key="textColor" name="TitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3qU-VC-yad">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3qU-VC-yad">
                                 <rect key="frame" x="31" y="252" width="312" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="TextAreaBackground"/>
@@ -724,7 +724,7 @@
                                 <color key="textColor" name="TitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tgn-K5-fIe">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tgn-K5-fIe">
                                 <rect key="frame" x="31" y="423" width="312" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="TextAreaBackground"/>
@@ -749,10 +749,11 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="processLogin:" destination="PVb-Z8-Xh7" eventType="touchUpInside" id="i3e-FU-faF"/>
+                                    <action selector="saveBtnTouched:" destination="z7D-NL-MSb" eventType="touchUpInside" id="A4U-y2-03m"/>
                                     <action selector="tapBuyButton:" destination="Des-kU-nvS" eventType="touchUpInside" id="AVB-Rx-pse"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psp-gA-OeV">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psp-gA-OeV">
                                 <rect key="frame" x="31" y="510" width="312" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="TextAreaBackground"/>
@@ -772,6 +773,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="i9B-pg-AKh"/>
+                    <connections>
+                        <outlet property="emailTxtFld" destination="gaF-jn-s4a" id="VK0-fV-jPD"/>
+                        <outlet property="nameTxtFld" destination="POM-iw-LBF" id="tHK-ZZ-h6I"/>
+                        <outlet property="passwordTxtFld" destination="Tgn-K5-fIe" id="YrH-jF-6xV"/>
+                        <outlet property="repeatPasswordTxtFld" destination="psp-gA-OeV" id="q7E-aC-LRX"/>
+                        <outlet property="surnameTxtFld" destination="3qU-VC-yad" id="zgP-kC-4p8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vPG-71-FdN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

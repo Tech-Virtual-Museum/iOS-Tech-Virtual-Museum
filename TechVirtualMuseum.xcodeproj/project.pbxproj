@@ -24,6 +24,7 @@
 		55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DB32935239800AF1AFF /* CarouselImage.swift */; };
 		55460BC929530B290034648A /* EventPurchaseCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55460BC829530B290034648A /* EventPurchaseCompletedViewController.swift */; };
 		55460BCB2953109E0034648A /* EditAccountDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55460BCA2953109E0034648A /* EditAccountDataViewController.swift */; };
+		55460BCD295311AD0034648A /* AccountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55460BCC295311AD0034648A /* AccountData.swift */; };
 		554E2A5929397F40009DCEC0 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A5829397F40009DCEC0 /* QRScannerView.swift */; };
 		554E2A6129398BC1009DCEC0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A6029398BC1009DCEC0 /* SignUpViewController.swift */; };
 		5570A567294B463E00FE0E9E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5570A566294B463E00FE0E9E /* SDWebImage */; };
@@ -116,6 +117,7 @@
 		55456DB32935239800AF1AFF /* CarouselImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselImage.swift; sourceTree = "<group>"; };
 		55460BC829530B290034648A /* EventPurchaseCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPurchaseCompletedViewController.swift; sourceTree = "<group>"; };
 		55460BCA2953109E0034648A /* EditAccountDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountDataViewController.swift; sourceTree = "<group>"; };
+		55460BCC295311AD0034648A /* AccountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountData.swift; sourceTree = "<group>"; };
 		554E2A5829397F40009DCEC0 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		554E2A6029398BC1009DCEC0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5567EE84293194690061C988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				55DB8A292936286C00A1C238 /* Event.swift */,
 				5502161129366FE700CFC800 /* EventsFirebase.swift */,
 				552802B72945080B00F9600C /* CustomNewCell.swift */,
+				55460BCC295311AD0034648A /* AccountData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 				55456DAF2934A91100AF1AFF /* HomeViewController.swift in Sources */,
 				552802B82945080B00F9600C /* CustomNewCell.swift in Sources */,
 				554E2A6129398BC1009DCEC0 /* SignUpViewController.swift in Sources */,
+				55460BCD295311AD0034648A /* AccountData.swift in Sources */,
 				55B0CDEF293445F900C7D96B /* FirestoreService.swift in Sources */,
 				5570A56E294BBD7B00FE0E9E /* CommentsViewController.swift in Sources */,
 				55460BC929530B290034648A /* EventPurchaseCompletedViewController.swift in Sources */,

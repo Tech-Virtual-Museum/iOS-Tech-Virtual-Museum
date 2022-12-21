@@ -32,6 +32,18 @@ class FirestoreService {
         }
     }
     
+    func setDocumentWithDocumentId(collectionId: String, documentId: String, documentData: [String: Any], completion: @escaping (_ error: Bool) -> Void) {
+        let docRef = db.collection(collectionId).document(documentId)
+
+        docRef.setData(documentData) { (error) in
+            if (error != nil)  {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
+        }
+    }
+    
     func getCollection(collectionId: String, completion: @escaping (_ error: Bool, _ docData: [QueryDocumentSnapshot]) -> Void) {
         db.collection(collectionId).getDocuments() { (querySnapshot, err) in
             if (err != nil)  {

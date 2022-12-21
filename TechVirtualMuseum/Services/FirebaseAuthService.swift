@@ -60,7 +60,6 @@ class FirebaseAuthService {
     func sendPasswordReset(email: String, completion: @escaping (_ error: Bool, _ errorDescription: String) -> Void) {
         Auth.auth().sendPasswordReset(withEmail: email) { error in
             if ((error) != nil) {
-                print("hay error")
                 completion(true, error?.localizedDescription ?? "")
             }
             else {
@@ -68,5 +67,28 @@ class FirebaseAuthService {
             }
         }
     }
+    
+    func changeEmail(email: String, completion: @escaping (_ error: Bool, _ errorDescription: String) -> Void) {
+        Auth.auth().currentUser?.updateEmail(to: email) { error in
+            if ((error) != nil) {
+                completion(true, error?.localizedDescription ?? "")
+            }
+            else {
+                completion(false, "")
+            }
+        }
+    }
+    
+    func changePassword(password: String, completion: @escaping (_ error: Bool, _ errorDescription: String) -> Void) {
+        Auth.auth().currentUser?.updatePassword(to: password) { error in
+            if ((error) != nil) {
+                completion(true, error?.localizedDescription ?? "")
+            }
+            else {
+                completion(false, "")
+            }
+        }
+    }
+    
     
 }
