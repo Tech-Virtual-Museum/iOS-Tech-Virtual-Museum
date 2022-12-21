@@ -21,8 +21,8 @@ class HomeViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = nil
-        setMapAnnotation(latitude: 28.0731675, longitude: -15.453959)
-        setMapRegion(latitude: 28.0731675, longitude: -15.453959)
+        setMapAnnotation(latitude: 28.073088, longitude: -15.451391)
+        setMapRegion(latitude: 28.073088, longitude: -15.451391)
         map.delegate = self
     }
     

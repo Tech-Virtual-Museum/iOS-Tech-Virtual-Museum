@@ -48,6 +48,34 @@ class EditAccountDataViewController: UIViewController {
     
     
     @IBAction func saveBtnTouched(_ sender: Any) {
+        var success: Bool = false
+        var correctPassword: Bool = false
+        
+        if passwordTxtFld.text != "" {
+            print("Hay contraseña")
+            if (passwordTxtFld.text == repeatPasswordTxtFld.text) {
+                print("Contraseña coincide")
+                if passwordTxtFld.text!.count >= 6 {
+                    correctPassword = true
+                }
+                else {
+                    print("Contraseña corta")
+                    let alertController = UIAlertController(title: "Invalid password", message: "The passwords needs to be at least 6 characters long.", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alertController, animated: false)
+                    return
+                }
+            }
+            else {
+                print("Contraseña no coincide")
+                let alertController = UIAlertController(title: "Error", message: "The password/change password fields do not match.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alertController, animated: false)
+                success = false
+                return
+            }
+        }
+        
         if nameTxtFld.text != self.originalName || surnameTxtFld.text != self.originalSurname || emailTxtFld.text != self.originalEmail {
             if emailTxtFld.text == originalEmail {
                 let dict: [String: Any] = ["name": nameTxtFld.text, "surname": surnameTxtFld.text, "email": originalEmail]
@@ -57,13 +85,26 @@ class EditAccountDataViewController: UIViewController {
                         let alertController = UIAlertController(title: "Error", message: "There has been an error when changing your account data.", preferredStyle: .alert)
                         alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                         self.present(alertController, animated: false)
+                        success = false
+                        return
                         
                     }
                     else {
+                        success = true
+                            
+                            if (correctPassword) {
+                                self.firebaseAuthService.changePassword(password: self.passwordTxtFld.text!) {
+                                    (error, description) in
+                                    print(description)
+                                    
+                            }
+                            
+                            
+                        }
                         let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         let homeViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
                         homeViewController.modalPresentationStyle = .fullScreen
-                        self.parent?.present(homeViewController, animated: true, completion: nil)
+                        self.parent?.present(homeViewController, animated: false, completion: nil)
                     }
                 }
             }
@@ -83,13 +124,26 @@ class EditAccountDataViewController: UIViewController {
                                 let alertController = UIAlertController(title: "Error", message: "There has been an error when changing your account data.", preferredStyle: .alert)
                                 alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                                 self.present(alertController, animated: false)
+                                success = false
+                                return
                                 
                             }
                             else {
-                                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                                let homeViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-                                homeViewController.modalPresentationStyle = .fullScreen
-                                self.parent?.present(homeViewController, animated: true, completion: nil)
+                                success = true
+                                if (success) {
+                                    
+                                    if (correctPassword) {
+                                        self.firebaseAuthService.changePassword(password: passwordTxtFld.text!) {
+                                            (error, description) in
+                                            print(description)
+                                            
+                                        }
+                                    }
+                                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                    let homeViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+                                    homeViewController.modalPresentationStyle = .fullScreen
+                                    self.parent?.present(homeViewController, animated: true, completion: nil)
+                                }
                             }
                         }
                     }
@@ -98,39 +152,21 @@ class EditAccountDataViewController: UIViewController {
             }
         }
         
-        if passwordTxtFld.text != "" {
-            if passwordTxtFld.text == repeatPasswordTxtFld.text {
-                self.firebaseAuthService.changePassword(password: passwordTxtFld.text!) {
-                    (error, description) in
-                    if (error) {
-                        let alertController = UIAlertController(title: "Error", message: description, preferredStyle: .alert)
-                        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                        self.present(alertController, animated: false)
-                    }
-                    else {
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let homeViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-                        homeViewController.modalPresentationStyle = .fullScreen
-                        self.parent?.present(homeViewController, animated: true, completion: nil)
-                    }
-                }
-            }
-            else {
-                let alertController = UIAlertController(title: "Error", message: "The password/change password fields do not match.", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(alertController, animated: false)
-            }
-        }
+        
+        
     }
     
     
-    /*
-    @objc func textFieldDidChange(_ textField: UITextField) {
-        if textField == nameTxtFld || textField == surnameTxtFld {
-            print("Entra")
-        }
+    @objc func editionCompleted() {
+        let alertController = UIAlertController(title: "Success!", message: "Your data has been edited successfully.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alertController, animated: false)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let homeViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+        homeViewController.modalPresentationStyle = .fullScreen
+        self.parent?.present(homeViewController, animated: true, completion: nil)
     }
-     */
+    
 
     /*
     // MARK: - Navigation

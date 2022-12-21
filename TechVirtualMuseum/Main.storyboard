@@ -730,7 +730,7 @@
                                 <color key="backgroundColor" name="TextAreaBackground"/>
                                 <color key="textColor" name="PlaceholderColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="email"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NEW PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrE-Xc-iwG">
                                 <rect key="frame" x="31" y="400" width="93" height="15"/>
@@ -748,9 +748,7 @@
                                     <color key="baseBackgroundColor" name="ButtonBackground"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="processLogin:" destination="PVb-Z8-Xh7" eventType="touchUpInside" id="i3e-FU-faF"/>
-                                    <action selector="saveBtnTouched:" destination="z7D-NL-MSb" eventType="touchUpInside" id="A4U-y2-03m"/>
-                                    <action selector="tapBuyButton:" destination="Des-kU-nvS" eventType="touchUpInside" id="AVB-Rx-pse"/>
+                                    <action selector="saveBtnTouched:" destination="z7D-NL-MSb" eventType="touchUpInside" id="LQR-l2-8qn"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="psp-gA-OeV">
@@ -759,7 +757,7 @@
                                 <color key="backgroundColor" name="TextAreaBackground"/>
                                 <color key="textColor" name="PlaceholderColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="email"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CONFIRM NEW PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdD-1j-pPM">
                                 <rect key="frame" x="31" y="487" width="148" height="15"/>

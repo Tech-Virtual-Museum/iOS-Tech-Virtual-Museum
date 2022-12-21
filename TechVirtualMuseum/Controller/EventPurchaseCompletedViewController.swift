@@ -20,7 +20,7 @@ class EventPurchaseCompletedViewController: UIViewController {
         let eventViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
         eventViewController.index = 0
         eventViewController.modalPresentationStyle = .fullScreen
-        self.present(eventViewController, animated: true, completion: nil)
+        self.present(eventViewController, animated: false, completion: nil)
     }
     
     /*
