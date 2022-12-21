@@ -84,6 +84,22 @@ class SecondSlidePurchaseViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        // Check if the requirements for the segue are met
+        if identifier == "thirdSlidePurchase" {
+            if juniorStepper.value == 0 && studentStepper.value == 0 && adultStepper.value == 0 && seniorStepper.value == 0 {
+                let alertController = UIAlertController(title: "Select tickets", message: "You must add at least one ticket to continue.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alertController, animated: false)
+                return false
+            }
+            else {
+                return true
+            }
+        }
+        return true
+    }
+    
 
     /*
     // MARK: - Navigation

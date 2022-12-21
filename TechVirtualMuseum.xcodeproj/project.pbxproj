@@ -25,6 +25,7 @@
 		55460BC929530B290034648A /* EventPurchaseCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55460BC829530B290034648A /* EventPurchaseCompletedViewController.swift */; };
 		55460BCB2953109E0034648A /* EditAccountDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55460BCA2953109E0034648A /* EditAccountDataViewController.swift */; };
 		55460BCD295311AD0034648A /* AccountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55460BCC295311AD0034648A /* AccountData.swift */; };
+		55460BCF29538EC60034648A /* TicketPurchaseCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55460BCE29538EC60034648A /* TicketPurchaseCompletedViewController.swift */; };
 		554E2A5929397F40009DCEC0 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A5829397F40009DCEC0 /* QRScannerView.swift */; };
 		554E2A6129398BC1009DCEC0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A6029398BC1009DCEC0 /* SignUpViewController.swift */; };
 		5570A567294B463E00FE0E9E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5570A566294B463E00FE0E9E /* SDWebImage */; };
@@ -118,6 +119,7 @@
 		55460BC829530B290034648A /* EventPurchaseCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPurchaseCompletedViewController.swift; sourceTree = "<group>"; };
 		55460BCA2953109E0034648A /* EditAccountDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountDataViewController.swift; sourceTree = "<group>"; };
 		55460BCC295311AD0034648A /* AccountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountData.swift; sourceTree = "<group>"; };
+		55460BCE29538EC60034648A /* TicketPurchaseCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketPurchaseCompletedViewController.swift; sourceTree = "<group>"; };
 		554E2A5829397F40009DCEC0 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		554E2A6029398BC1009DCEC0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5567EE84293194690061C988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				55E8B34A29523B410017E1E4 /* ResetPasswordViewController.swift */,
 				55460BC829530B290034648A /* EventPurchaseCompletedViewController.swift */,
 				55460BCA2953109E0034648A /* EditAccountDataViewController.swift */,
+				55460BCE29538EC60034648A /* TicketPurchaseCompletedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 				552FF0242932E56800BD8FC8 /* FirebaseAuthService.swift in Sources */,
 				55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */,
 				55AD6917293E8EA400A8620D /* CarouselViewController.swift in Sources */,
+				55460BCF29538EC60034648A /* TicketPurchaseCompletedViewController.swift in Sources */,
 				55A2DE7B294927F100FC96F7 /* PurchaseCompletedViewController.swift in Sources */,
 				554E2A5929397F40009DCEC0 /* QRScannerView.swift in Sources */,
 				55E8B34B29523B410017E1E4 /* ResetPasswordViewController.swift in Sources */,

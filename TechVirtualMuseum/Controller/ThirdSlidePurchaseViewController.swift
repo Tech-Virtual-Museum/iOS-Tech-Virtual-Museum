@@ -15,8 +15,15 @@ class ThirdSlidePurchaseViewController: UIViewController {
     @IBOutlet weak var emailTxt: UITextField!
     
     
+    @IBOutlet weak var creditCardBtn: UIButton!
+    @IBOutlet weak var paypalBtn: UIButton!
+    @IBOutlet weak var applePayBtn: UIButton!
+    
+    
+    
     var fireAuthService = FirebaseAuthService()
     var firestoreService = FirestoreService()
+    var lastSelectedButton: UIButton? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,16 +51,52 @@ class ThirdSlidePurchaseViewController: UIViewController {
                 }
             }
         }
-                
-
-        
-        
-
-        // Do any additional setup after loading the view.
+        creditCardBtn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        paypalBtn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        applePayBtn.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    @objc func buttonTapped(button: UIButton) {
+        if (lastSelectedButton != nil) {
+            resetButtonStyle(button: lastSelectedButton!)
+        }
+        lastSelectedButton = button
+        button.layer.borderColor = UIColor.red.cgColor
+        
+        setSelectedButtonStyle(button: button)
+    }
+    
+    func setSelectedButtonStyle(button: UIButton) {
+        button.layer.borderWidth = 1.0
+        button.layer.borderColor = UIColor(named: "ButtonBackground")?.cgColor
+        button.layer.cornerRadius = 10
+    }
+    
+    
+    func resetButtonStyle(button: UIButton) {
+        button.layer.borderWidth = 1.0
+        button.layer.borderColor = UIColor.systemGray5.cgColor
+        button.layer.cornerRadius = 10
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        if identifier == "purchaseSuccessful" {
+            if lastSelectedButton != nil {
+                return true
+            }
+            else {
+                let alertController = UIAlertController(title: "Select payment method", message: "You must select a payment method to continue.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alertController, animated: false)
+                return false
+            }
+        }
+        return true
     }
     
 

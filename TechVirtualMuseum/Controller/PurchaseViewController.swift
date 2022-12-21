@@ -107,6 +107,21 @@ class PurchaseViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        // Check if the requirements for the segue are met
+        if identifier == "secondSlidePurchase" {
+            if (lastSelectedCell != nil) {
+                return true
+            } else {
+                let alertController = UIAlertController(title: "Select hour", message: "You must select an hour to continue.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alertController, animated: false)
+                return false
+            }
+        }
+        return true
+    }
+    
     
     
     
