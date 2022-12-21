@@ -12,12 +12,45 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var selectedItem: String = ""
     let firestoreService = FirestoreService()
+    var fireAuthService = FirebaseAuthService()
     var comments: [[String: Any]] = []
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var commentTxtFld: UITextField!
+    
     
     @IBAction func sendCommentBtnTapped(_ sender: UIButton) {
-        
+        if (commentTxtFld.text != "") {
+            self.fireAuthService.getCurrentUserId() {
+                (loggedIn, id) in
+                if loggedIn {
+                    var userId: String = id
+                    let userInfo = self.firestoreService.getDocumentWithDocumentId(collectionId: "users", documentId: id) {
+                        (error, docData) in
+                        var userName: String = ""
+                        var userSurname: String = ""
+                        var userEmail: String = ""
+                        if let name = docData["name"] as? String {
+                            userName = name
+                        }
+                        if let surname = docData["surname"] as? String {
+                            userSurname = surname
+                        }
+                        
+                        let author = userName + " " + userSurname
+                        let collectionId = "comments/" + self.selectedItem + "/comments"
+                        self.firestoreService.addDocumentToCollection(collectionId: collectionId, documentData: ["author" : author, "comment": self.commentTxtFld.text]) {
+                            error in
+                            if (!error) {
+                                self.comments.insert(["author" : author, "comment": self.commentTxtFld.text], at: 0)
+                                self.commentTxtFld.text = ""
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     
 
@@ -74,6 +107,40 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        // Shift the view back down to its original position
+        view.frame.origin.y = 0
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Register for keyboard notifications
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Unregister for keyboard notifications
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            // Update the height of the view to shift it up by the height of the keyboard
+            //view.frame.origin.y = -keyboardSize.height
+            view.frame.origin.y = -keyboardSize.height
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        // Shift the view back down to its original position
+        view.frame.origin.y = 0
     }
     
 

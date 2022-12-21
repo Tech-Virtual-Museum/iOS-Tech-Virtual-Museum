@@ -1066,8 +1066,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="EventTitleColor"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100 comments" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSy-yE-qS9">
-                                <rect key="frame" x="60" y="414" width="186" height="23"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" comments" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSy-yE-qS9">
+                                <rect key="frame" x="60" y="414" width="61" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="12"/>
                                 <color key="textColor" name="EventTitleColor"/>
@@ -1122,6 +1122,7 @@
                     <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="yS3-hM-trk"/>
                     <navigationItem key="navigationItem" id="BEn-4e-Gbn"/>
                     <connections>
+                        <outlet property="commentNumberLbl" destination="aSy-yE-qS9" id="GD3-Cf-zBj"/>
                         <outlet property="itemDescription" destination="ldc-Oe-XRB" id="5Q3-MG-UdT"/>
                         <outlet property="itemImage" destination="Okf-LI-06X" id="fBl-u7-lFC"/>
                         <outlet property="itemName" destination="f4P-2a-yuz" id="hL8-SC-dvG"/>
@@ -1238,6 +1239,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Comments" id="Bx0-re-yzg"/>
                     <connections>
+                        <outlet property="commentTxtFld" destination="n75-KL-wem" id="dXu-r8-FfB"/>
                         <outlet property="tableView" destination="eku-BI-evI" id="Z6P-8O-7WU"/>
                     </connections>
                 </viewController>

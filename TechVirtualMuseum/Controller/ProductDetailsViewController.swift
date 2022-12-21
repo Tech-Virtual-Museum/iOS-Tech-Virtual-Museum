@@ -11,17 +11,28 @@ import SDWebImage
 class ProductDetailsViewController: UIViewController {
     
     var itemDetails: [String: Any]?
+    var firestoreService = FirestoreService()
     
     
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemDescription: UILabel!
     
+    @IBOutlet weak var commentNumberLbl: UILabel!
     var selectedItem: String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let collectionId = "comments/" + self.selectedItem + "/comments"
+        firestoreService.collectionSize(collectionId: collectionId) {
+            (error, count) in
+            if (!error) {
+                let countString = String(count)
+                self.commentNumberLbl.text = countString + " comments"
+            }
+        }
 
         itemImage.contentMode = .scaleAspectFill
         if let url = URL(string: itemDetails?["img"] as! String) {

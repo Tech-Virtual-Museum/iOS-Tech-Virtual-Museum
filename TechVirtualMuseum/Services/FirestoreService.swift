@@ -64,4 +64,18 @@ class FirestoreService {
                 }
         }
     }
+    
+    
+    func collectionSize(collectionId: String, completion: @escaping (_ error: Bool, _ count: Int) -> Void) {
+        let collectionRef = db.collection(collectionId);
+
+        collectionRef.getDocuments { (querySnapshot, error) in
+          if let error = error {
+              completion(true, 0)
+          } else {
+            let collectionSize = querySnapshot!.count
+            completion(false, collectionSize)
+          }
+        }
+    }
 }
