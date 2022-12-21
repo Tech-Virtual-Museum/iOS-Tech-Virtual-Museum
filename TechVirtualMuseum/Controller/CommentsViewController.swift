@@ -12,6 +12,8 @@ class CommentsViewController: UIViewController {
     var selectedItem: String = ""
     let firestoreService = FirestoreService()
     var comments: Any? = []
+    @IBOutlet weak var tableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +21,19 @@ class CommentsViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
+        /*
         self.firestoreService.getDocumentWithDocumentId(collectionId: "comments", documentId: selectedItem ){
             (error, collectionData) in
             self.comments = collectionData["comments"]
             print(self.comments)
+        }*/
+        
+        self.firestoreService.getCollection(collectionId: "comments/BVMroFz8RbG4zpjI3b71/comments") {
+            (error, collectionData) in
+            for document in collectionData {
+                print("\(document.documentID) => \(document.data())")
+                //self.items.append(document.data())
+            }
         }
 
         // Do any additional setup after loading the view.

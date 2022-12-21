@@ -26,6 +26,7 @@
 		55460BCB2953109E0034648A /* EditAccountDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55460BCA2953109E0034648A /* EditAccountDataViewController.swift */; };
 		55460BCD295311AD0034648A /* AccountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55460BCC295311AD0034648A /* AccountData.swift */; };
 		55460BCF29538EC60034648A /* TicketPurchaseCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55460BCE29538EC60034648A /* TicketPurchaseCompletedViewController.swift */; };
+		55460BD3295393730034648A /* CustomCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55460BD2295393730034648A /* CustomCommentCell.swift */; };
 		554E2A5929397F40009DCEC0 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A5829397F40009DCEC0 /* QRScannerView.swift */; };
 		554E2A6129398BC1009DCEC0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A6029398BC1009DCEC0 /* SignUpViewController.swift */; };
 		5570A567294B463E00FE0E9E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5570A566294B463E00FE0E9E /* SDWebImage */; };
@@ -120,6 +121,7 @@
 		55460BCA2953109E0034648A /* EditAccountDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountDataViewController.swift; sourceTree = "<group>"; };
 		55460BCC295311AD0034648A /* AccountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountData.swift; sourceTree = "<group>"; };
 		55460BCE29538EC60034648A /* TicketPurchaseCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketPurchaseCompletedViewController.swift; sourceTree = "<group>"; };
+		55460BD2295393730034648A /* CustomCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCommentCell.swift; sourceTree = "<group>"; };
 		554E2A5829397F40009DCEC0 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		554E2A6029398BC1009DCEC0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5567EE84293194690061C988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 				5502161129366FE700CFC800 /* EventsFirebase.swift */,
 				552802B72945080B00F9600C /* CustomNewCell.swift */,
 				55460BCC295311AD0034648A /* AccountData.swift */,
+				55460BD2295393730034648A /* CustomCommentCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55460BD3295393730034648A /* CustomCommentCell.swift in Sources */,
 				55456DB12934B48F00AF1AFF /* AccountDataViewController.swift in Sources */,
 				553875C32943B6200097B066 /* TabBarController.swift in Sources */,
 				5570A569294B987100FE0E9E /* VideoViewController.swift in Sources */,
