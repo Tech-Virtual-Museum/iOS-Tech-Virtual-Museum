@@ -64,6 +64,9 @@ class PurchaseEventViewController: UIViewController {
                 }
             }
         }
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
     }
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
@@ -121,6 +124,10 @@ class PurchaseEventViewController: UIViewController {
             self.present(successViewController, animated: true, completion: nil)
             
         }
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
 

@@ -34,6 +34,8 @@ class EditAccountDataViewController: UIViewController {
         originalSurname = accountData!.surname
         originalEmail = accountData!.email
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
         
         /*
@@ -74,6 +76,14 @@ class EditAccountDataViewController: UIViewController {
                 success = false
                 return
             }
+        }
+        
+        if nameTxtFld.text == self.originalName && surnameTxtFld.text == self.originalSurname && emailTxtFld.text == self.originalEmail && !correctPassword {
+            let alertController = UIAlertController(title: "Error", message: "No changes to save.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.present(alertController, animated: false)
+            success = false
+            return
         }
         
         if nameTxtFld.text != self.originalName || surnameTxtFld.text != self.originalSurname || emailTxtFld.text != self.originalEmail {
@@ -163,6 +173,10 @@ class EditAccountDataViewController: UIViewController {
 
         alertController.addAction(OKAction)
         self.present(alertController, animated: false)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
 

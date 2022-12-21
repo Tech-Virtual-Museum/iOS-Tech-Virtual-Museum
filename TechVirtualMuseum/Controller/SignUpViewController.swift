@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
     var signUpManager = FirebaseAuthService()
     
     
@@ -17,8 +17,17 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtRepeatPassword: UITextField!
     
+    var keyboardSize: CGRect? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        txtEmail.delegate = self
+        txtPassword.delegate = self
+        txtRepeatPassword.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -71,6 +80,50 @@ class SignUpViewController: UIViewController {
                 
         }
     }
+    
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        // Shift the view up by the height of the keyboard
+        view.frame.origin.y = -keyboardSize!.height + 100
+    }
+    
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        // Shift the view back down to its original position
+        view.frame.origin.y = 0
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Register for keyboard notifications
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Unregister for keyboard notifications
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            // Update the height of the view to shift it up by the height of the keyboard
+            //view.frame.origin.y = -keyboardSize.height
+            self.keyboardSize = keyboardSize
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        // Shift the view back down to its original position
+        view.frame.origin.y = 0
+    }
+
     
     
     /*

@@ -16,6 +16,9 @@ class CommentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         self.firestoreService.getDocumentWithDocumentId(collectionId: "comments", documentId: selectedItem ){
             (error, collectionData) in
             self.comments = collectionData["comments"]
@@ -23,6 +26,10 @@ class CommentsViewController: UIViewController {
         }
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
 
