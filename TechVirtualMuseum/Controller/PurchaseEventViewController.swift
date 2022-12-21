@@ -90,7 +90,7 @@ class PurchaseEventViewController: UIViewController {
     
     func setSelectedButtonStyle(button: UIButton) {
         button.layer.borderWidth = 1.0
-        button.layer.borderColor = UIColor.red.cgColor
+        button.layer.borderColor = UIColor(named: "ButtonBackground")?.cgColor
         button.layer.cornerRadius = 10
     }
     
@@ -117,7 +117,9 @@ class PurchaseEventViewController: UIViewController {
         else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let successViewController = storyboard.instantiateViewController(withIdentifier: "PurchaseEventSucceeded")
+            successViewController.modalPresentationStyle = .fullScreen
             self.present(successViewController, animated: true, completion: nil)
+            
         }
     }
     

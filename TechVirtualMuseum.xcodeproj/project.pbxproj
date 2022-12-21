@@ -22,6 +22,8 @@
 		55456DAF2934A91100AF1AFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DAE2934A91100AF1AFF /* HomeViewController.swift */; };
 		55456DB12934B48F00AF1AFF /* AccountDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */; };
 		55456DB42935239800AF1AFF /* CarouselImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55456DB32935239800AF1AFF /* CarouselImage.swift */; };
+		55460BC929530B290034648A /* EventPurchaseCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55460BC829530B290034648A /* EventPurchaseCompletedViewController.swift */; };
+		55460BCB2953109E0034648A /* EditAccountDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55460BCA2953109E0034648A /* EditAccountDataViewController.swift */; };
 		554E2A5929397F40009DCEC0 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A5829397F40009DCEC0 /* QRScannerView.swift */; };
 		554E2A6129398BC1009DCEC0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554E2A6029398BC1009DCEC0 /* SignUpViewController.swift */; };
 		5570A567294B463E00FE0E9E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5570A566294B463E00FE0E9E /* SDWebImage */; };
@@ -112,6 +114,8 @@
 		55456DAE2934A91100AF1AFF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		55456DB02934B48F00AF1AFF /* AccountDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataViewController.swift; sourceTree = "<group>"; };
 		55456DB32935239800AF1AFF /* CarouselImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselImage.swift; sourceTree = "<group>"; };
+		55460BC829530B290034648A /* EventPurchaseCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPurchaseCompletedViewController.swift; sourceTree = "<group>"; };
+		55460BCA2953109E0034648A /* EditAccountDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccountDataViewController.swift; sourceTree = "<group>"; };
 		554E2A5829397F40009DCEC0 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		554E2A6029398BC1009DCEC0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5567EE84293194690061C988 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 				5570A56D294BBD7B00FE0E9E /* CommentsViewController.swift */,
 				55B06FEA2950C8D300D9EC25 /* PurchaseEventViewController.swift */,
 				55E8B34A29523B410017E1E4 /* ResetPasswordViewController.swift */,
+				55460BC829530B290034648A /* EventPurchaseCompletedViewController.swift */,
+				55460BCA2953109E0034648A /* EditAccountDataViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -657,11 +663,13 @@
 				55E8B34B29523B410017E1E4 /* ResetPasswordViewController.swift in Sources */,
 				55AD691B293E901000A8620D /* CarouselView.swift in Sources */,
 				55946A5C29382F60000178BF /* QRScannerViewController.swift in Sources */,
+				55460BCB2953109E0034648A /* EditAccountDataViewController.swift in Sources */,
 				55456DAF2934A91100AF1AFF /* HomeViewController.swift in Sources */,
 				552802B82945080B00F9600C /* CustomNewCell.swift in Sources */,
 				554E2A6129398BC1009DCEC0 /* SignUpViewController.swift in Sources */,
 				55B0CDEF293445F900C7D96B /* FirestoreService.swift in Sources */,
 				5570A56E294BBD7B00FE0E9E /* CommentsViewController.swift in Sources */,
+				55460BC929530B290034648A /* EventPurchaseCompletedViewController.swift in Sources */,
 				55A2DE792949262D00FC96F7 /* ThirdSlidePurchaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

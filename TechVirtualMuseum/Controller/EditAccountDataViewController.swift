@@ -1,19 +1,17 @@
 //
-//  TabBarController.swift
+//  EditAccountDataViewController.swift
 //  TechVirtualMuseum
 //
-//  Created by Nahima Ortega on 9/12/22.
+//  Created by Nahima Ortega on 21/12/22.
 //
 
 import UIKit
 
-class TabBarController: UITabBarController {
-    var index: Int = 1
-    
+class EditAccountDataViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.selectedIndex = index
-        
+
         // Do any additional setup after loading the view.
     }
     
