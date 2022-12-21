@@ -54,4 +54,14 @@ class FirestoreService {
         }
 
     }
+    
+    func addDocumentToCollection(collectionId: String, documentData: [String: Any], completion: @escaping (_ error: Bool) -> Void) {
+        let docRef = db.collection(collectionId).addDocument(data: documentData) { (error) in
+            if (error != nil)  {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
+        }
+    }
 }

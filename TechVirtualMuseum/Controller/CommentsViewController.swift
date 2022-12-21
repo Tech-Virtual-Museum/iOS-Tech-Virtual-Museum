@@ -7,12 +7,18 @@
 
 import UIKit
 
-class CommentsViewController: UIViewController {
+class CommentsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     
     var selectedItem: String = ""
     let firestoreService = FirestoreService()
-    var comments: Any? = []
+    var comments: [[String: Any]] = []
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBAction func sendCommentBtnTapped(_ sender: UIButton) {
+        
+    }
     
 
     override func viewDidLoad() {
@@ -21,23 +27,45 @@ class CommentsViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
-        /*
-        self.firestoreService.getDocumentWithDocumentId(collectionId: "comments", documentId: selectedItem ){
-            (error, collectionData) in
-            self.comments = collectionData["comments"]
-            print(self.comments)
-        }*/
-        
-        self.firestoreService.getCollection(collectionId: "comments/BVMroFz8RbG4zpjI3b71/comments") {
+        let collectionId = "comments/" + selectedItem + "/comments"
+        print(collectionId)
+        self.firestoreService.getCollection(collectionId: collectionId) {
             (error, collectionData) in
             for document in collectionData {
                 print("\(document.documentID) => \(document.data())")
-                //self.items.append(document.data())
+                self.comments.append(document.data())
             }
+            self.tableView.reloadData()
         }
+        view.addSubview(tableView)
+        tableView.dataSource = self
+        tableView.delegate = self
+
+        tableView.register(CustomCommentCell.self, forCellReuseIdentifier: "Cell")
 
         // Do any additional setup after loading the view.
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCommentCell", for: indexPath) as! CustomCommentCell
+        
+        let comment = comments[indexPath.row]
+        
+        if let author = comment["author"] as? String {
+            cell.commentUsername.text = author
+        }
+        
+        if let author = comment["comment"] as? String {
+            cell.commentContent.text = author
+        }
+        
+      return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return comments.count
+    }
+  
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
