@@ -20,7 +20,7 @@ class HomeViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.leftBarButtonItem = nil
         setMapAnnotation(latitude: 28.0731675, longitude: -15.453959)
         setMapRegion(latitude: 28.0731675, longitude: -15.453959)
     }

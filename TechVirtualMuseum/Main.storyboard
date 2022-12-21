@@ -96,7 +96,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="JUH-Pt-nMk" kind="show" id="eOv-Gc-mSm"/>
+                                    <segue destination="JUH-Pt-nMk" kind="show" identifier="home" id="eOv-Gc-mSm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkq-0q-TFN">
@@ -108,8 +108,7 @@
                                     <color key="baseBackgroundColor" name="ButtonBackground"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="processLogin:" destination="PVb-Z8-Xh7" eventType="touchUpInside" id="AMe-0u-8zs"/>
-                                    <segue destination="Ir9-cH-DyR" kind="presentation" identifier="home" modalPresentationStyle="fullScreen" id="jLI-oH-QGB"/>
+                                    <action selector="processLogin:" destination="PVb-Z8-Xh7" eventType="touchUpInside" id="7yW-Sh-mnM"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWA-sL-tee">
@@ -169,7 +168,7 @@
         <!--home-->
         <scene sceneID="1c0-91-tNb">
             <objects>
-                <viewController title="home" id="6C6-1t-I6g" customClass="HomeViewController" customModule="TechVirtualMuseum" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" title="home" id="6C6-1t-I6g" customClass="HomeViewController" customModule="TechVirtualMuseum" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gc2-yo-ZZZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -767,7 +766,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="JXA-UG-cok">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Ir9-cH-DyR" customClass="TabBarController" customModule="TechVirtualMuseum" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" automaticallyAdjustsScrollViewInsets="NO" id="Ir9-cH-DyR" customClass="TabBarController" customModule="TechVirtualMuseum" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="25q-5R-hKE"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -2084,27 +2083,8 @@
                                 <color key="textColor" name="LaunchColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYo-1O-Gll">
-                                <rect key="frame" x="91" y="274" width="193" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
-                                <color key="textColor" name="TitleColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your email and we will send an email for recovery." textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCD-7t-6WV">
-                                <rect key="frame" x="29" y="311" width="316" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
-                                <color key="textColor" name="SubtitleColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="key.horizontal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lxk-Tm-PUH">
-                                <rect key="frame" x="63" y="134.66666666666652" width="249" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" name="EventTitleColor"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ER6-ak-ICj">
-                                <rect key="frame" x="34" y="413" width="306" height="34"/>
+                                <rect key="frame" x="34" y="437" width="306" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" name="TextAreaBackground"/>
                                 <color key="textColor" name="PlaceholderColor"/>
@@ -2112,10 +2092,29 @@
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQB-AD-Znc">
-                                <rect key="frame" x="34" y="390" width="103" height="15"/>
+                                <rect key="frame" x="34" y="414" width="103" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="12"/>
                                 <color key="textColor" name="TitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="key.horizontal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lxk-Tm-PUH">
+                                <rect key="frame" x="63" y="134.66666666666652" width="249" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="EventTitleColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Forgot password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYo-1O-Gll">
+                                <rect key="frame" x="91" y="288" width="193" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
+                                <color key="textColor" name="TitleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your email and we will send an email for recovery." textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCD-7t-6WV">
+                                <rect key="frame" x="29" y="318" width="316" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                                <color key="textColor" name="SubtitleColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -2152,7 +2151,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="SSQ-g4-cvM"/>
-        <segue reference="jLI-oH-QGB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ApplePay" width="72" height="40"/>

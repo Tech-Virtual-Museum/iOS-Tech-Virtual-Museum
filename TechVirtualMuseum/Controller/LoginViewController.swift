@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
     @IBAction func processLogin(_ sender: Any) {
         guard let email = txtEmail.text, let password = txtPassword.text else { return }
         loginManager.signIn(email: email, password: password) {[weak self] (success, error) in
@@ -28,16 +29,50 @@ class LoginViewController: UIViewController {
                 var message: String = ""
                 if (success) {
                     message = "User was sucessfully logged in."
-                    self.performSegue(withIdentifier: "home", sender: self)
+                    //self.performSegue(withIdentifier: "home", sender: self)
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    
+                    let homeViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+                    //self.present(homeViewController, animated: true, completion: nil)
+                    //self.navigationController?.pushViewController(homeViewController, animated: true)
+                    homeViewController.modalPresentationStyle = .fullScreen
+                    self.parent?.present(homeViewController, animated: true, completion: nil)
                 } else {
                     message = "There was an error. " + error
+                    let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self.present(alertController, animated: false)
                 }
-                print(message)
-                let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self.present(alertController, animated: false)
+                
             }
     }
+    
+
+    /*
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "home" {
+            var message: String = ""
+            var successRes: Bool = true
+            guard let email = txtEmail.text, let password = txtPassword.text else { return false }
+            let result: () = loginManager.signIn(email: email, password: password) {
+                [weak self] (success, error) in
+                if (success) {
+                    successRes = true
+                    
+                } else {
+                    successRes = false
+                    message = "There was an error. "
+                    message += error
+                    let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                    self!.present(alertController, animated: false)
+                }
+                
+            }
+        }
+        return true
+    }
+     */
     
 
     /*
