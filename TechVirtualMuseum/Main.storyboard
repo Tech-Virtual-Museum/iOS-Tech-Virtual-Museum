@@ -317,7 +317,7 @@
             </objects>
             <point key="canvasLocation" x="3506.4000000000001" y="-696.05911330049264"/>
         </scene>
-        <!--Title-->
+        <!--Sign Up View Controller-->
         <scene sceneID="bHL-qi-SJE">
             <objects>
                 <viewController id="JUH-Pt-nMk" customClass="SignUpViewController" customModule="TechVirtualMuseum" sceneMemberID="viewController">
@@ -343,7 +343,6 @@
                                 <connections>
                                     <action selector="clickSignUpButton:" destination="JUH-Pt-nMk" eventType="touchUpInside" id="7ow-d6-sDK"/>
                                     <action selector="processLogin:" destination="PVb-Z8-Xh7" eventType="touchUpInside" id="mu9-zt-TUF"/>
-                                    <segue destination="Ir9-cH-DyR" kind="presentation" identifier="home" modalPresentationStyle="fullScreen" id="o8b-7a-8YP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign up now to get the full experience of our museum." textAlignment="center" lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQV-YS-bE0">
@@ -446,7 +445,7 @@
                         <viewLayoutGuide key="safeArea" id="nn1-Ui-MoM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="M8Z-gx-0Ja"/>
+                    <navigationItem key="navigationItem" style="editor" id="M8Z-gx-0Ja"/>
                     <connections>
                         <outlet property="txtEmail" destination="61n-Ho-NY3" id="E13-3w-Cue"/>
                         <outlet property="txtName" destination="kOb-RL-pLv" id="VMp-lq-Feg"/>
@@ -534,7 +533,7 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search events..." translatesAutoresizingMaskIntoConstraints="NO" id="gU7-ib-gEC">
-                                <rect key="frame" x="-5" y="95" width="357" height="44"/>
+                                <rect key="frame" x="9" y="95" width="357" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -620,12 +619,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="rectangle.portrait.and.arrow.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="U5H-6X-wwh">
-                                <rect key="frame" x="41" y="427" width="36" height="43"/>
+                                <rect key="frame" x="41" y="431" width="26" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="SubtitleColor"/>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ESX-ly-OyM">
+                                <rect key="frame" x="177" y="264" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmD-NW-ien">
-                                <rect key="frame" x="41" y="428" width="166" height="42"/>
+                                <rect key="frame" x="41" y="429" width="166" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="TitleColor"/>
                                 <state key="normal" title="Button"/>
@@ -637,10 +640,6 @@
                                     <segue destination="ckR-7B-ylq" kind="presentation" modalPresentationStyle="fullScreen" id="Gfe-Nt-DlD"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ESX-ly-OyM">
-                                <rect key="frame" x="177" y="264" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zW6-Fs-3ZV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -994,7 +993,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="processLogin:" destination="PVb-Z8-Xh7" eventType="touchUpInside" id="8dY-VI-CBl"/>
-                                    <segue destination="cHY-H8-AXl" kind="presentation" id="arK-qx-dCE"/>
+                                    <segue destination="cHY-H8-AXl" kind="presentation" identifier="purchaseEvent" id="arK-qx-dCE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfJ-cH-XYO">
@@ -1933,9 +1932,7 @@
                                     <color key="baseBackgroundColor" name="ButtonBackground"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="processLogin:" destination="PVb-Z8-Xh7" eventType="touchUpInside" id="ivI-19-eQO"/>
-                                    <action selector="tapBuyButton:" destination="Des-kU-nvS" eventType="touchUpInside" id="frf-1B-5ZN"/>
-                                    <segue destination="1lA-Qk-Mzo" kind="show" id="TZB-Z8-tdE"/>
+                                    <action selector="buyBtnTapped:" destination="cHY-H8-AXl" eventType="touchUpInside" id="n17-1H-nI5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your personal info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVX-mm-e5R">
@@ -2000,6 +1997,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Guj-Hd-ysx"/>
+                    <connections>
+                        <outlet property="applePayBtn" destination="5RL-7R-H3i" id="dwX-lJ-52w"/>
+                        <outlet property="creditCardBtn" destination="BqP-CV-iJb" id="ne6-o6-xwt"/>
+                        <outlet property="emailTxtFld" destination="X8z-8o-hML" id="SgY-6r-vuy"/>
+                        <outlet property="nameTxtFld" destination="2XW-UO-pLp" id="nhc-MJ-U3d"/>
+                        <outlet property="paypalBtn" destination="5wm-m5-I4R" id="hSI-n5-Txg"/>
+                        <outlet property="pricingLbl" destination="GsG-IU-nit" id="ND9-or-Q0a"/>
+                        <outlet property="pricingSmallerLbl" destination="uDr-yB-Q1Y" id="wg0-EP-Bqj"/>
+                        <outlet property="stepper" destination="uPJ-2U-6rp" id="xRP-d4-rFZ"/>
+                        <outlet property="stepperLbl" destination="kfm-JA-ttq" id="Q4L-Pr-wlJ"/>
+                        <outlet property="surnameTxtFld" destination="Abh-Cz-6TG" id="QWK-Us-Ozg"/>
+                        <outlet property="totalPriceLbl" destination="g21-MZ-QOk" id="rRV-CE-jIw"/>
+                        <outlet property="totalTicketsLbl" destination="uUc-t0-vhR" id="nGx-vh-u5P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gWu-nk-0VZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2008,9 +2019,9 @@
         <!--View Controller-->
         <scene sceneID="yvf-a7-ISH">
             <objects>
-                <viewController id="1lA-Qk-Mzo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PurchaseEventSucceeded" id="1lA-Qk-Mzo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5qe-rk-Rdl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="755"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pjc-sg-Qo2">

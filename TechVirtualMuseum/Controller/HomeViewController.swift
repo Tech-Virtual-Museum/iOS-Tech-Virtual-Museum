@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 //import HSCycleGalleryView
 
-class HomeViewController: UIViewController{
+class HomeViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var carousel: UIView!
@@ -23,12 +23,14 @@ class HomeViewController: UIViewController{
         self.navigationItem.leftBarButtonItem = nil
         setMapAnnotation(latitude: 28.0731675, longitude: -15.453959)
         setMapRegion(latitude: 28.0731675, longitude: -15.453959)
+        map.delegate = self
     }
     
     
     func setMapAnnotation(latitude: Double, longitude: Double) {
         let mkAnnotation: MKPointAnnotation = MKPointAnnotation()
         mkAnnotation.coordinate =  CLLocationCoordinate2DMake(latitude, longitude)
+        mkAnnotation.title = "Tech Virtual Museum"
         map.addAnnotation(mkAnnotation)
     }
     
@@ -44,6 +46,28 @@ class HomeViewController: UIViewController{
             completion(error, docData)
         }
     }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let latitude = (view.annotation?.coordinate.latitude)!
+        let longitude = (view.annotation?.coordinate.longitude)!
+
+        let regionDistance: CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
+        let regionSpan = MKCoordinateRegion(center: coordinates, latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = view.annotation?.title ?? "TVM Location"
+        mapItem.openInMaps(launchOptions: options)
+    }
+
+
+
+
+
     
 
     /*

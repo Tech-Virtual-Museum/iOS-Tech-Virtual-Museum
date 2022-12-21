@@ -25,7 +25,9 @@ class SignUpViewController: UIViewController {
     
 
     @IBAction func clickSignUpButton(_ sender: Any) {
-        if let email = txtEmail.text, let password = txtPassword.text, let name = txtName.text, let surname = txtSurname.text {
+        /*
+        if let email = txtEmail.text, let password = txtPassword.text, let repeatPassword = txtRepeatPassword.text,
+            let name = txtName.text, let surname = txtSurname.text {
                 signUpManager.createUser(name: name, surname: surname, email: email, password: password) {[weak self] (success, error) in
                     guard let `self` = self else { return }
                     var message: String = ""
@@ -40,6 +42,34 @@ class SignUpViewController: UIViewController {
                     self.present(alertController, animated: false)
                 }
             }
+         */
+        if let email = txtEmail.text, let password = txtPassword.text, let repeatPassword = txtRepeatPassword.text,
+            let name = txtName.text, let surname = txtSurname.text {
+            if password == repeatPassword {
+                signUpManager.createUser(name: name, surname: surname, email: email, password: password) {[weak self] (success, error) in
+                    guard let `self` = self else { return }
+                    if (success) {
+                        //self.performSegue(withIdentifier: "home", sender: self)
+                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                        
+                        let homeViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+                        homeViewController.modalPresentationStyle = .fullScreen
+                        self.parent?.present(homeViewController, animated: true, completion: nil)
+                    } else {
+                        let message = "There was an error. " + error
+                        let alertController = UIAlertController(title: "An error ocurred", message: message, preferredStyle: .alert)
+                        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                        self.present(alertController, animated: false)
+                    }
+                }
+            }
+            else {
+                let alertController = UIAlertController(title: "An error ocurred", message: "The password/confirm password fields do not match.", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.present(alertController, animated: false)
+            }
+                
+        }
     }
     
     

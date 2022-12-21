@@ -46,6 +46,15 @@ class EventDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "purchaseEvent" {
+            let eventPrice = selectedItem?["pricing"]
+            
+            let destinationVC = segue.destination as! PurchaseEventViewController
+            destinationVC.eventPrice = eventPrice as! String
+        }
+    }
 
     /*
     // MARK: - Navigation
