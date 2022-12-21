@@ -101,10 +101,7 @@ class EditAccountDataViewController: UIViewController {
                             
                             
                         }
-                        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let homeViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-                        homeViewController.modalPresentationStyle = .fullScreen
-                        self.parent?.present(homeViewController, animated: false, completion: nil)
+                        self.editionCompleted()
                     }
                 }
             }
@@ -139,10 +136,7 @@ class EditAccountDataViewController: UIViewController {
                                             
                                         }
                                     }
-                                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                                    let homeViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-                                    homeViewController.modalPresentationStyle = .fullScreen
-                                    self.parent?.present(homeViewController, animated: true, completion: nil)
+                                    editionCompleted()
                                 }
                             }
                         }
@@ -159,12 +153,16 @@ class EditAccountDataViewController: UIViewController {
     
     @objc func editionCompleted() {
         let alertController = UIAlertController(title: "Success!", message: "Your data has been edited successfully.", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+
+        let OKAction = UIAlertAction(title: "OK", style: .cancel) { _ in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+            homeViewController.modalPresentationStyle = .fullScreen
+            self.parent?.present(homeViewController, animated: false, completion: nil)
+        }
+
+        alertController.addAction(OKAction)
         self.present(alertController, animated: false)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let homeViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-        homeViewController.modalPresentationStyle = .fullScreen
-        self.parent?.present(homeViewController, animated: true, completion: nil)
     }
     
 
