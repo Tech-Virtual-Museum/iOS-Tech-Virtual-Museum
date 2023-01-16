@@ -30,8 +30,12 @@ You can also run the app using a simulated device, which you can select between 
   <img src="https://user-images.githubusercontent.com/56322714/212750691-ddabffd9-b8a4-4041-a285-b38291665ff6.gif" width="300"/>
 </p>
 
-
 - `Feature 2`: Viewing and editing users own personal information. Log out button included below users' data.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/56322714/212762800-e562aec5-6138-4ca3-8707-1cc789682625.gif" width="300"/>
+</p>
+
+
 - `Feature 3`: Password recovery in case the user has forgotten their password. 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/56322714/212751003-f8a9ab99-e860-4685-bd05-d4f4e7f6f647.gif" width="300"/>
