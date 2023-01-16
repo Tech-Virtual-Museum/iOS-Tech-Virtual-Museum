@@ -104,7 +104,8 @@ To test the QR scanner feature, here are some QR codes you can scan to see some 
 <img width="285" alt="Captura de Pantalla 2022-12-15 a las 1 00 59 p  m" src="https://user-images.githubusercontent.com/56322714/212767061-3f9b25ca-f02f-4d9f-acb3-4f90a3a5f4b6.png">
   </p>
 
-
+## :bookmark_tabs: Documentation
+Software documentation, as well as additional resources such as a PowerPoint presentation with key points, mock-ups, a video showing the app running, etc., can be found by clicking on this <a href="https://github.com/Tech-Virtual-Museum/Documentation">link</a>.
 
 
 ## Contributors
