@@ -47,6 +47,7 @@ You can also run the app using a simulated device, which you can select between 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/56322714/212758874-d22207a3-b39c-45f3-a5b9-715d71be352f.gif" width="300"/>
   <img src="https://user-images.githubusercontent.com/56322714/212759073-d8dbae07-90af-48a1-8baa-b310eea65426.gif" width="300"/>
+  <img src="https://user-images.githubusercontent.com/56322714/212761893-8009876d-b734-48e9-9d62-1dfb4a88ba54.gif" width="300"/>
 
 </p>
 
