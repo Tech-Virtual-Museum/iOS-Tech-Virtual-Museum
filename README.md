@@ -12,9 +12,11 @@ Below are the technologies used for developing this version, which corresponds t
 * <img src="https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png" alt="SwiftUI" width="32"/> &ensp; **SwiftUI** - Framework for building user interfaces  for iOS, macOS, watchOS, tvOS and iPadOS applications.
 * <img src="https://miro.medium.com/max/400/1*JktK87FL_sqDDnuxHxe6Fw.png" alt="Firebase" width="32"/> &ensp; **Firebase** - Google platform that offers different services divided into modules for developing applications.
 * <img src="https://s3.amazonaws.com/cdn.hotglue.xyz/images/logos/firebase-auth.png" alt="Firebase Auth" width="32"/> &ensp; **Firebase Auth** - Provides backend services to authenticate users in apps easy and securely. Used in the app to authenticate users and perform activities such as logging in or out, signing in, editing the profile data or recovering password.
-* &nbsp; <img src="https://miro.medium.com/max/304/1*BXaq7UZ-QoMH0vF0Znjy0A.jpeg" alt="Firestore" width="25"/> &ensp; **Firestore** - Flexible and scalable database for mobile and web development. There, information of museum events and products, among others, can be stored using collections and documents.
+* &nbsp; <img src="https://seeklogo.com/images/F/firestore-logo-3828671CC5-seeklogo.com.png" alt="Firestore" width="25"/> &ensp; **Firestore** - Flexible and scalable database for mobile and web development. There, information of museum events and products, among others, can be stored using collections and documents.
 
 * &nbsp; <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/YouTube_social_white_squircle.svg/1200px-YouTube_social_white_squircle.svg.png" alt="Firestore" width="30"/> &ensp; **YouTube API** - Allows to add YouTube features to the mobile app. Allows this app to display videos of the objects that are scanned.
+* &nbsp; <img src="https://user-images.githubusercontent.com/56322714/212765471-d7e278e0-85ee-4e7c-bdfb-dfb72dace9b0.png" alt="Jira" width="30"/> &ensp; **Jira** - Software to help the team to manage the work to develop the app.
+
 
 
 ## :wrench: Installation
