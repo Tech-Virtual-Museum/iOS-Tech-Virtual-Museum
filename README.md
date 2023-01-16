@@ -18,12 +18,6 @@ Below are the technologies used for developing this version, which corresponds t
 * &nbsp; <img src="https://user-images.githubusercontent.com/56322714/212765471-d7e278e0-85ee-4e7c-bdfb-dfb72dace9b0.png" alt="Jira" width="30"/> &ensp; **Jira** - Software to help the team to manage the work to develop the app.
 
 
-
-## :wrench: Installation
-For generating and distributing the .ipa file to test this app on your own iPhone or iOS device, a subscription to Apple Developer Program is needed. Because of this, the remaining way to test this project on your device is downloading the source code from this repository and installing the dependencies used. 
-Then, the device that is going to be used needs to be connected to the Mac using a cable or pair it via Wi-Fi with Xcode. After adding this device as a simulator, select it as a simulated device from the run destination menu and run the app using the run button. It is important, if you are using a real device, to enable developer mode in orden to be able to run it.
-You can also run the app using a simulated device, which you can select between the variety of simulator Apple offers inside Xcode.
-
 ## :hammer:Project features
 - `Feature 1`: Registration and authentication of users through forms which fields get validated using Firebase Auth and regular expressions.
 
@@ -94,6 +88,23 @@ You can also run the app using a simulated device, which you can select between 
 
 
 - `Feature 8`: Tab bar that allows the user to navigate between the three main views of the app: home page, QR scanner and event list.
+
+
+## :wrench: Installation
+For generating and distributing the .ipa file to test this app on your own iPhone or iOS device, a subscription to Apple Developer Program is needed. Because of this, the remaining way to test this project on your device is downloading the source code from this repository and installing the dependencies used. 
+Then, the device that is going to be used needs to be connected to the Mac using a cable or pair it via Wi-Fi with Xcode. After adding this device as a simulator, select it as a simulated device from the run destination menu and run the app using the run button. It is important, if you are using a real device, to enable developer mode in orden to be able to run it.
+You can also run the app using a simulated device, which you can select between the variety of simulator Apple offers inside Xcode.
+
+To test the QR scanner feature, here are some QR codes you can scan to see some objects on display of the museum.
+<p align="center">
+<img width="287" alt="Captura de Pantalla 2022-12-15 a las 1 00 04 p  m" src="https://user-images.githubusercontent.com/56322714/212767054-73b2a1b7-ad8f-4efd-bf5f-cb489e8c2772.png">
+<img width="276" alt="Captura de Pantalla 2022-12-15 a las 1 00 20 p  m" src="https://user-images.githubusercontent.com/56322714/212767057-75893fe3-9c63-413d-975c-33012bd1d2e5.png">
+<img width="273" alt="Captura de Pantalla 2022-12-15 a las 1 00 37 p  m" src="https://user-images.githubusercontent.com/56322714/212767058-f30602f6-a123-4487-8e5b-4b6643ff0719.png">
+<img width="275" alt="Captura de Pantalla 2022-12-15 a las 1 00 49 p  m" src="https://user-images.githubusercontent.com/56322714/212767059-b172cab7-ac50-416d-bb31-2c7cf62187bd.png">
+<img width="285" alt="Captura de Pantalla 2022-12-15 a las 1 00 59 p  m" src="https://user-images.githubusercontent.com/56322714/212767061-3f9b25ca-f02f-4d9f-acb3-4f90a3a5f4b6.png">
+  </p>
+
+
 
 
 ## Contributors
