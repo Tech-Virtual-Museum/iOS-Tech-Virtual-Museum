@@ -45,7 +45,7 @@ class FirestoreService {
     }
     
     func getCollection(collectionId: String, completion: @escaping (_ error: Bool, _ docData: [QueryDocumentSnapshot]) -> Void) {
-        db.collection(collectionId).getDocuments() { (querySnapshot, err) in
+        db.collection(collectionId).order(by: FieldPath.documentID()).getDocuments() { (querySnapshot, err) in
             if (err != nil)  {
                     completion(true, [])
                 } else {

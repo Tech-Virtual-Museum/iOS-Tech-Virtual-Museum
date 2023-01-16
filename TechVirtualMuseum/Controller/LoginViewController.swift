@@ -19,6 +19,18 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        loginManager.getCurrentUserId() {
+            loggedIn, id in
+            if (loggedIn) {
+                print("A")
+                let homeViewController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+                homeViewController.modalPresentationStyle = .fullScreen
+                self.parent?.present(homeViewController, animated: false, completion: nil)
+            }
+            
+        }
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.

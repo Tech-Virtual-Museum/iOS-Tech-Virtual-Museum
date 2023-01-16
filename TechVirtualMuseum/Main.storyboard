@@ -36,7 +36,7 @@
         <!--Login View Controller-->
         <scene sceneID="uQ9-bC-qF3">
             <objects>
-                <viewController id="PVb-Z8-Xh7" customClass="LoginViewController" customModule="TechVirtualMuseum" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="PVb-Z8-Xh7" customClass="LoginViewController" customModule="TechVirtualMuseum" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GyK-1h-kJv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -533,7 +533,7 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search events..." translatesAutoresizingMaskIntoConstraints="NO" id="gU7-ib-gEC">
-                                <rect key="frame" x="7" y="95" width="356" height="44"/>
+                                <rect key="frame" x="6" y="95" width="356" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -913,7 +913,7 @@
                                 </cells>
                             </collectionView>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="2fY-Hx-x96">
-                                <rect key="frame" x="11" y="176" width="338" height="305"/>
+                                <rect key="frame" x="10" y="176" width="339" height="305"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="ButtonBackground"/>
                             </datePicker>
@@ -2209,7 +2209,7 @@
         <!--Navigation Controller-->
         <scene sceneID="98o-Cd-RdP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ckR-7B-ylq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginNavController" automaticallyAdjustsScrollViewInsets="NO" id="ckR-7B-ylq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Fb-YZ-hpn">
                         <rect key="frame" x="0.0" y="47" width="375" height="44"/>
