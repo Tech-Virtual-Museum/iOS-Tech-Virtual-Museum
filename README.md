@@ -24,9 +24,27 @@ You can also run the app using a simulated device, which you can select between 
 
 ## :hammer:Project features
 - `Feature 1`: Registration and authentication of users through forms which fields get validated using Firebase Auth and regular expressions.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/56322714/212747818-70322077-6dc6-4e78-9769-477f37821d8d.gif" width="300"/>
+  <img src="https://user-images.githubusercontent.com/56322714/212750691-ddabffd9-b8a4-4041-a285-b38291665ff6.gif" width="300"/>
+</p>
+
+
 - `Feature 2`: Viewing and editing users own personal information. Log out button included below users' data.
 - `Feature 3`: Password recovery in case the user has forgotten their password. 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/56322714/212751003-f8a9ab99-e860-4685-bd05-d4f4e7f6f647.gif" width="300"/>
+</p>
+
 - `Feature 4`: Home page. Here, a carousel with different images of products can be seen, as well as an interactive map with the museums location. Clicking on the map annotation, you can get redirected to Apple Maps to start your route to the museum. There is also a button to book a ticket to visit the museum.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/56322714/212748997-5917b2b9-3c9d-44a6-9a6f-497fb91143fb.gif" width="300"/>
+</p>
+
+
+
 - `Feature 5`: Museum ticket booking. In the first view, the user can select the date and hour to visit the museum. Then, they must select the corresponding tickets and, after choosing them, select a payment method.
 - `Feature 6`: Event list, that show the upcoming events that will take place at the museum, from exhibitions to talks or expositions. Its time and date is also shown.
 - `Feature 6.1`: Clicking one of the above list items, the user can see the details of the event, such as a description, pricing and a button to book a ticket for that event.
