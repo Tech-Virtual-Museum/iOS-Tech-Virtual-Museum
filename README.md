@@ -44,6 +44,12 @@ You can also run the app using a simulated device, which you can select between 
 </p>
 
 - `Feature 5`: Museum ticket booking. In the first view, the user can select the date and hour to visit the museum. Then, they must select the corresponding tickets and, after choosing them, select a payment method.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/56322714/212758874-d22207a3-b39c-45f3-a5b9-715d71be352f.gif" width="300"/>
+  <img src="https://user-images.githubusercontent.com/56322714/212759073-d8dbae07-90af-48a1-8baa-b310eea65426.gif" width="300"/>
+
+</p>
+
 - `Feature 6`: Event list, that show the upcoming events that will take place at the museum, from exhibitions to talks or expositions. Its time and date is also shown. There is a searchbar above the event list that can be used to search an event by its name.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/56322714/212755215-bd3e8ac3-6799-4967-ade1-5145959dee24.gif" width="300"/>
@@ -57,7 +63,9 @@ You can also run the app using a simulated device, which you can select between 
 
 - `Feature 6.2`: Clicking the button, the user can access the process to buy a ticket for an event.
 <p align="center">
-  <img src="" width="300"/>
+  <img src="https://user-images.githubusercontent.com/56322714/212757668-43fab97b-a6b4-4387-9e1d-3c1fbd5d4488.gif" width="300"/>
+  
+
 </p>
 
 - `Feature 7`: QR Scanner used by the users to scan the QR codes next to the items of the museum, to get the detailed information of the object.
