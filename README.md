@@ -46,13 +46,22 @@ You can also run the app using a simulated device, which you can select between 
 
 
 - `Feature 5`: Museum ticket booking. In the first view, the user can select the date and hour to visit the museum. Then, they must select the corresponding tickets and, after choosing them, select a payment method.
-- `Feature 6`: Event list, that show the upcoming events that will take place at the museum, from exhibitions to talks or expositions. Its time and date is also shown.
+- `Feature 6`: Event list, that show the upcoming events that will take place at the museum, from exhibitions to talks or expositions. Its time and date is also shown. There is a searchbar above the event list that can be used to search an event by its name.
 - `Feature 6.1`: Clicking one of the above list items, the user can see the details of the event, such as a description, pricing and a button to book a ticket for that event.
 - `Feature 6.2`: Clicking the button, the user can access the process to buy a ticker for an event.
 - `Feature 7`: QR Scanner used by the users to scan the QR codes next to the items of the museum, to get the detailed information of the object.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/56322714/212753187-40c3b037-447d-46ff-a9c2-e86a3feabfcf.gif" width="300"/>
+</p>
+
 - `Feature 7.1`: After scanning the QR code, the user can see the description and image of the object, as well as two other buttons (comment button to redirect to comment section and play button to play a video of the object).
 - `Feature 7.1.1`: After pressing the comment button, the user can see the commments other users have submitted. Also, there is a comment field where the user can write the comment and submit it.
 - `Feature 7.1.2`: After pressing the play button, the user can see an embedded YouTube video inside the app. This video can be paused, resumed and also enables fast forward and rewind.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/56322714/212752450-341ed5f4-4934-43c1-9e48-0604f3ac219a.gif" width="300"/>
+</p>
+
+
 - `Feature 8`: Tab bar that allows the user to navigate between the three main views of the app: home page, QR scanner and event list.
 
 
